@@ -1,0 +1,424 @@
+/* Carlie van wyk u21672823 */
+
+/* Background image-black and white: Photo by Ashim D’Silva on Unsplash */
+/* Background image-cloudy color:Photo by Captureson Photography on Unsplash */
+/* Background image-sunset color:Photo by Dewet Willemse on Unsplash */
+
+/*__________________________________day night theme_________________________________*/
+.dayNight {
+  background-image: url("images/captureson-photography-gq_9Lq8oNYc-unsplash.jpg");
+}
+.dayNight.change {
+  background-image: url("images/darkTheme.jpg");
+}
+
+/*__________________________________All pages_________________________________*/
+body {
+  /* background-image: url("images/captureson-photography-gq_9Lq8oNYc-unsplash.jpg"); */
+  background-size: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: fit2, Arial, Helvetica;
+}
+
+@font-face {
+  font-family: fit2;
+  src: url("fonts/roboto/RobotoCondensed-Regular.ttf");
+}
+
+nav {
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.726);
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav div {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  margin: 2px;
+  border-radius: 10px;
+}
+
+nav div a {
+  text-decoration: none;
+  color: black;
+}
+
+nav div:hover a {
+  color: white;
+}
+
+nav div:hover {
+  background-color: #000000;
+}
+
+#login-signup {
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.726);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+/* #login-signup div a {
+  /* text-decoration: none; */
+/* color: black; */
+
+.current {
+  background-color: #000000;
+}
+
+.current a {
+  color: white;
+}
+
+#logo {
+  position: fixed;
+  left: -20px;
+  top: 60px;
+  width: 200px;
+}
+#logo img {
+  width: 100%; 
+  opacity: 90%;
+}
+
+/*_____________________________________________________________________________________ PA2.html */
+#header-PA2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#header-PA2 nav {
+  width: 100%;
+}
+
+#logo-PA2 img {
+  width: 20%;
+  opacity: 90%;
+}
+
+/*________________________________________________________________________today*/
+main {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+#search_filter {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#search-container input {
+  border-radius: 5px;
+}
+
+#search-container button {
+  border-radius: 5px;
+}
+
+#filter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#news_items {
+  display: flex;
+  flex-direction: column;
+}
+
+.news_item {
+  background-color: rgba(255, 255, 255, 0.726);
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.news_item:hover {
+  color: #ff0044;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.7);
+}
+
+#LOTR > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#LOTR img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+#LOTR figure {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#wonderwoman div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#wonderwoman img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+#wonderwoman figure {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#Avatar div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#Avatar img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+#Avatar figure {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#Arcane div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#Arcane img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+#Arcane figure {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#Batman div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#Batman img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+#Batman figure {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*_________________________________________________________________________southAfrica*/
+#SA-main {
+  margin-top: 20px;
+}
+
+#SA-nature div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#SA-nature img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+#SA-nature figure {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#SA-nature a {
+  text-decoration: none;
+  color: black;
+}
+
+#SA-nature a:hover {
+  text-decoration: underline;
+}
+
+#SA-politics div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#SA-politics img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+#SA-politics figure {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#SA-politics a {
+  text-decoration: none;
+  color: black;
+}
+
+#SA-politics a:hover {
+  text-decoration: underline;
+}
+
+#SA-people div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#SA-people img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+#SA-people figure {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#SA-people a {
+  text-decoration: none;
+  color: black;
+}
+
+#SA-people a:hover {
+  text-decoration: underline;
+}
+
+#SA-sport div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#SA-sport img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+#SA-sport figure {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#SA-sport a {
+  text-decoration: none;
+  color: black;
+}
+
+#SA-sport a:hover {
+  text-decoration: underline;
+}
+
+#SA-food div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#SA-food img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+#SA-food figure {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#SA-food a {
+  text-decoration: none;
+  color: black;
+}
+
+#SA-food a:hover {
+  text-decoration: underline;
+}
+
+/*____________________________________________________________________________________________covid*/
+#covid-graph {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#covid-graph img {
+  width: 80%;
+  opacity: 80%;
+}
+
+#covid-main article {
+  background-color: rgba(255, 255, 255, 0.726);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*____________________________________________________________________________________________calendar*/

@@ -1,0 +1,252 @@
+<?xml version="1.0"?>
+<!--Carlie van wyk, u21672823-->
+<users>
+    <user>
+        <userInfo>
+            <username> Pholcidae </username>
+            <fullName attr="92"> Daddy Long Legs </fullName>          <!--(92) ???-->
+            <tel> 321 023 2222 </tel>
+            <location>
+                <street></street>
+                <suburb> Hatfield </suburb>
+                <city> Pretoria </city>
+                <postalCode></postalCode>
+            </location>
+        </userInfo>
+
+        <movies>
+            <movie>
+                <title> Brokeback Mountain </title>
+                <director> Ang Lee </director>
+                <genres>
+                    <genre> Drama </genre> 
+                    <genre>Romance</genre>
+                </genres>
+                <duration unit="min"> 134 </duration>
+                <synopsis> 
+                    The story of a forbidden and secretive relationship between two cowboys, 
+                    and their lives over the years 
+                </synopsis>                                         
+                <releaseDate country='USA'> 13 January 2006 </releaseDate>
+                <contentRating> R </contentRating>
+                <consumerRating unit="outOfTen"> 7 </consumerRating>                   <!--unit can be "outOfTen" or "star"-->
+                <staff></staff>
+                <cast> 
+                    <cast1>Jake Gyllenhaal</cast1> 
+                    <cast2>Heath Ledger</cast2>
+                    <cast3>Michelle Williams </cast3>
+                </cast>
+                <writers> 
+                    <shortStory> Annie Proulx </shortStory>
+                    <screenplay> Larry McMurtry </screenplay>
+                </writers>
+            </movie>
+
+            <movie>
+                <title> Juno </title>
+                <director></director>
+                <genres> 
+                    <genre>Comedy</genre> 
+                    <genre>Drama</genre>
+                </genres>
+                <duration unit="min"> 96 </duration>
+                <synopsis> 
+                    Faced with an unplanned pregnancy, an offbeat young woman 
+                    makes an unusual decision regarding her unborn child. 
+                </synopsis>                                     
+                <releaseDate country='USA'> 25 December 2007 </releaseDate>
+                <contentRating> PG-13 </contentRating>
+                <consumerRating unit="star"> 4 </consumerRating>                     <!--unit can be "outOfTen" or "star"-->
+                <staff></staff>
+                <cast></cast>
+                <writers> 
+                    <shortStory></shortStory>
+                    <screenplay></screenplay>
+                </writers>
+            </movie>
+        </movies>
+
+        <videoGames>
+            <game>
+                <title> The Last of Us Part II </title>
+                <genres></genres>
+                <series></series>
+                <engine></engine>
+                <platforms> 
+                    <platform>PlayStation 4 </platform>
+                </platforms>
+                <synopsis></synopsis>
+                <releaseDate country=''></releaseDate>
+                <contentRating></contentRating>
+                <consumerRating></consumerRating>
+                <developedOn></developedOn>
+                <developers> Naughty Dog </developers>
+                <designers> 
+                    <designer>Emilia Schatz</designer> 
+                    <designer>Ricky Cambier </designer>
+                </designers>
+                <awards> The Game Award for Most Anticipated Game </awards>
+                <writers> 
+                    <writer>Neil Druckmann</writer>
+                    <writer>Halley Gross </writer> 
+                </writers>
+                <composer> Gustavo Santaolalla </composer>
+            </game>
+
+            <game>
+                <title> Red Dead Redemption 2 </title>
+                <genres> 
+                    <genre>Western action-adventure</genre>
+                </genres>
+                <series> Red Dead </series>
+                <engine></engine>
+                <platforms> 
+                    <platform>PlayStation 4</platform>
+                    <platform>Xbox One</platform> 
+                </platforms>
+                <synopsis> The third entry in the Red Dead series is a prequel to the 2010 game Red Dead Redemption. </synopsis>
+                <releaseDate country=''> 26 October 2018</releaseDate>
+                <contentRating></contentRating>
+                <consumerRating unit="outOfTen"> 10 </consumerRating>
+                <developedOn></developedOn>
+                <developers> Rockstar Games </developers>
+                <designers></designers>
+                <awards> The Game Award for Best Narrative </awards>
+                <writers></writers>
+                <composer></composer>
+            </game>
+
+            <game>
+                <title> Lost Ark </title>
+                <genres> 
+                    <genre>Massively multiplayer online role-playing game </genre>
+                </genres>
+                <series> </series>
+                <engine></engine>
+                <platforms> 
+                    <platform>Windows</platform>
+                </platforms>
+                <synopsis></synopsis>
+                <releaseDate country=''> </releaseDate>
+                <contentRating></contentRating>
+                <consumerRating unit="stars"> 3.4 </consumerRating>
+                <developedOn> Unreal Engine 3 </developedOn>
+                <developers> 
+                    <developer>Smilegate </developer>
+                    <developer>Tripod Studio</developer>
+                    <developer>Smilegate Entertainment</developer>
+                    <developer>Inc.</developer>
+                    <developer>Smilegate RPG</developer>  
+                </developers>
+                <designers></designers>
+                <awards></awards>
+                <writers></writers>
+                <composer></composer>
+            </game>
+        </videoGames>
+
+        <music>
+            <album>
+                <title> Everyone Who Pretended to Like Me Is Gone </title>
+                <genres> 
+                    <genre>Pop/Rock</genre>
+                </genres>                                                                              <!-- ??? -->
+                <styles> 
+                    <style>Alternative/Indie Rock</style>
+                    <style>Indie Rock</style> 
+                    <style>Garage Rock Revival </style> 
+                </styles>
+                <artist type="group"> The Walkmen </artist>                <!--type can be group/solo-->
+                <writtenBy></writtenBy>
+                <recordingDate> 2001 </recordingDate>
+                <releaseDate country=''> 26 March 2002 </releaseDate>
+                <duration unit="min"> 50:49 </duration>
+                <rating unit="star"> 4.5 </rating>            <!--unit can be "outOfTen" or "star"-->
+            </album>
+
+            <song>
+                <title> How do you sleep? </title>
+                <genres> 
+                    <genre>Pop</genre>
+                    <genre>Dance-pop</genre> 
+                </genres>
+                <styles></styles>       
+                <artist type="solo"> Sam Smith </artist>
+                <writters> 
+                    <writer>Sam Smith</writer>
+                    <writer>Savan Kotecha</writer>
+                    <writer>Max Martin</writer>
+                    <writer>Ilya Salmanzadeh</writer>     
+                </writters>
+                <recordingDate></recordingDate>
+                <releaseDate country=''> 19 July 2019 </releaseDate>
+                <duration unit="min"> 3:22 </duration>       
+                <rating unit=""></rating>                            <!--unit can be "outOfTen" or "star"-->
+            </song>
+
+            <song>
+                <title> Daru </title>
+                <genres> 
+                    <genre>Vocal</genre>
+                    <genre>International</genre>  
+                </genres>
+                <styles> 
+                    <style>Cabaret</style>
+                    <style>Russian Traditions </style>
+                </styles>       
+                <artist type="solo"> Daru</artist>
+                <writtenBy></writtenBy>
+                <recordingDate></recordingDate>
+                <releaseDate country=''></releaseDate>
+                <duration unit=""></duration>       
+                <rating unit=""></rating> 
+            </song>
+        </music>
+        
+        <food>
+            <restaurant>
+                <name> Springbok Bar </name>
+                <origin></origin>
+                <rating unit="star"> 4.1 </rating>                        <!--unit can be "outOfTen" or "star"-->
+                <tel> 012 362 7766 </tel>
+                <location> 
+                    <street> 495 Hilda St </street>
+                    <suburb> Hatfield </suburb>
+                    <city> Pretoria </city>
+                    <postalCode> 0028 </postalCode>
+                </location>
+            </restaurant>
+
+            <dish>
+                <name> Chow Mein </name>
+                <origin> Guangdong, China </origin>
+                <course></course>
+                <ingredients>  
+                    <ingredient>Noodles</ingredient>
+                    <ingredient>soy sauce</ingredient>
+                    <ingredient>vegetables</ingredient>   
+                </ingredients>
+                <variations> 
+                    <variation>Chicken</variation>
+                    <variation>pork</variation>
+                    <variation>beef</variation>
+                    <variation>shrimp</variation>
+                    <variation>tofu </variation>   
+                </variations>
+            </dish>
+
+            <dish>
+                <name> Taramasalata </name>
+                <origin> Greece </origin>
+                <course> Meze </course>
+                <ingredients> 
+                    <ingredient>Tarama (salted and cured roe of cod or carp)</ingredient>
+                    <ingredient>bread crumbs or mashed potatoes</ingredient>
+                    <ingredient>lemon juice or vinegar</ingredient>
+                    <ingredient>olive oil</ingredient>   
+                </ingredients>
+                <variations></variations>
+            </dish>
+        </food>
+    </user>
+</users>

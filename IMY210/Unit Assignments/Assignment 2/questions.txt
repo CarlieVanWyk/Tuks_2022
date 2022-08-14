@@ -1,0 +1,36 @@
+sample.xml:
+linking to it's own xsd file
+
+linking to the 2 namespaces
+
+	not sure if you can have duplicate elements like "section" 
+	or "auhtor"
+
+if you have nested elements where do you put their 
+attributes? since attributes have to come after the model 
+group, do those elem attr's come after the main model group
+or after their own model group?
+
+	overall errors help?
+
+<authors>
+<!-- contain <author>, 10 at most-->
+how do you declare the above?  
+	maxOccurs="3"
+
+	<publisher year="2010">London:Headline Review</publisher>
+	<!-- plain test, no longer than 50 character--> 
+	<!-- @year is a numeric value between 1900 - 2100-->
+
+	<!-- One of three formats all in sequence-->
+	<!-- Format A: title, authors, publisher-->
+	<!-- Format B: infinite amount of ratings-->
+	<!-- Format C: description, genres, summary-->
+
+	<!-- All elements are required to appear in order formats -->
+
+	<!-- <isbn> can either hold more <isbn> elements (maximum 3) or text -->
+
+	use attr ??
+
+	sample_nf line 62-63

@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:f="https://realbooks.cn/ns/1.0/f" targetNamespace="https://realbooks.cn/ns/1.0/f">
+<xs:import schemaLocation="a2.xsd"></xs:import>
+	<xs:element name="book">
+		<xs:complexType>
+			<xs:sequence>
+			
+				<xs:element name="section">
+					<xs:complexType>
+						<xs:sequence>
+						
+							<xs:element name="title">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:maxLength value="50"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							
+							<xs:element name="authors">
+								<xs:complexType>
+									<xs:sequence maxOccurs="10">
+										
+										<xs:element name="author">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="50"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							
+							<xs:element name="publisher">
+							    <xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="f:pubInnerTagText">
+											<xs:attribute name="year" type="f:pubAttrRestriction"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				
+				<xs:element name="section">
+					<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+							
+							<xs:element name="rating">
+							     <xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="f:ratingInnerTagText">
+											<xs:attribute name="source" type="f:ratingAttrRestriction"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				
+				
+				<xs:element name="section">
+					<xs:complexType>
+						<xs:sequence>
+						
+							<xs:element name="description">
+								<xs:complexType>
+									<xs:choice maxOccurs="unbounded">
+										
+										<xs:element name="pages" type="xs:integer">
+										</xs:element>
+										<xs:element name="dimension">
+											<xs:simpleType>
+												<xs:restriction base="xs:integer">
+													<xs:maxInclusive value="10"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+ 
+										<xs:element name="format">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="50"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="edition">
+											<xs:simpleType>
+												<xs:restriction base="xs:integer">
+													<xs:maxInclusive value="10"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										
+										
+									</xs:choice>
+								</xs:complexType>
+							</xs:element>
+							
+							<xs:element name="genres">
+								<xs:complexType>
+									<xs:sequence maxOccurs="10">
+										<xs:element name="genre">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="50"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							
+							<xs:element name="summary" type="xs:string">
+							</xs:element>
+							
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:simpleType name="pubAttrRestriction">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="50"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="pubInnerTagText">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="50"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="ratingInnerTagText">
+		<xs:restriction base="xs:integer">
+			<xs:maxInclusive value="10"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	 <xs:simpleType name="ratingAttrRestriction">
+	 	<xs:restriction base="xs:string">
+			<xs:enumeration value="goodread" />
+            <xs:enumeration value="imdb" />
+            <xs:enumeration value="editor" />
+		</xs:restriction>
+	</xs:simpleType>
+
+</xs:schema>
+

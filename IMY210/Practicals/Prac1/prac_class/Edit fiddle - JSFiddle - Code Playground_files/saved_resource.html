@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)https://jsfiddle.net/carlie/bfham7op/3/embedded/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    
+    <meta http-equiv="edit-Type" edit="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JSFiddle</title>
+
+      <meta name="robots" content="index, follow">
+      <meta name="googlebot" content="index, follow">
+
+      <script type="text/javascript">
+        var height
+        var force_height = null
+        var slug = "bfham7op"
+        var show_src = "//fiddle.jshell.net/carlie/bfham7op/3/show/light/"
+        var resize_element_counter = 0
+        var shell_edit_url = "/carlie/bfham7op/3/light/"
+
+      </script>
+
+      <script src="./highlight.pack.js.download"></script>
+      <script src="./embed.js.download"></script>
+      <link rel="stylesheet" media="screen" href="./embed-light.css">
+
+    <style type="text/css" media="screen">
+    /* */</style>
+
+  </head>
+  <body>
+    <div id="full-embed">
+        <header>
+          <h1>
+            <a href="https://jsfiddle.net/carlie/bfham7op/3/" target="_blank">
+              <svg width="34" height="40">
+      <use xlink:href="//jsfiddle.net/sprite.svg#logo"></use>
+    </svg>Edit in JSFiddle
+            </a>
+          </h1>
+          <div id="actions">
+            <ul class="normalRes">
+                <li class="active">
+                  <a data-trigger-type="js" href="https://jsfiddle.net/carlie/bfham7op/3/embedded/#JavaScript">JavaScript</a>
+                </li>
+                <li class="">
+                  <a data-trigger-type="html" href="https://jsfiddle.net/carlie/bfham7op/3/embedded/#HTML">HTML</a>
+                </li>
+                <li class="">
+                  <a data-trigger-type="css" href="https://jsfiddle.net/carlie/bfham7op/3/embedded/#CSS">CSS</a>
+                </li>
+                <li class="">
+                  <a data-trigger-type="result" href="https://jsfiddle.net/carlie/bfham7op/3/embedded/#Result">Result</a>
+                </li>
+            </ul>
+            <div class="hl" style="left: 0px; width: 81.0875px;"></div>
+          </div>
+        </header>
+
+        <div id="tabs">
+              <pre class="tCont JavaScript active hljs"><span class="hljs-keyword">new</span> Vue({
+  <span class="hljs-attr">el</span>: <span class="hljs-string">'#root'</span>,
+  <span class="hljs-attr">data</span>: {
+    <span class="hljs-attr">value</span>: <span class="hljs-string">"Hell"</span>,
+    <span class="hljs-attr">itemA</span>: <span class="hljs-string">""</span>,
+    <span class="hljs-comment">//add style</span>
+    <span class="hljs-attr">todos</span>: [{
+        <span class="hljs-attr">text</span>: <span class="hljs-string">'make coffee'</span>
+      },
+      {
+        <span class="hljs-attr">text</span>: <span class="hljs-string">'make more coffee'</span>
+      },
+      {
+        <span class="hljs-attr">text</span>: <span class="hljs-string">'make more coffee'</span>
+      },
+    ]
+  },
+  <span class="hljs-attr">methods</span>: {
+    <span class="hljs-attr">add_item</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+      <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.todos.push({
+        <span class="hljs-attr">text</span>: <span class="hljs-keyword">this</span>.itemA
+      });
+    }
+  }
+})
+</pre>
+              <pre class="tCont HTML hljs"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"root"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>
+    {{ value }}
+  <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span> <span class="hljs-comment">&lt;!-- onject syntax, array syntax --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"itemA"</span> <span class="hljs-attr">:class</span>=<span class="hljs-string">"[itemA.length &lt; 5 ? 'red' : 'green']"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ol</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>  <span class="hljs-attr">v-for</span>=<span class="hljs-string">"todo in todos"</span>&gt;</span> {{ todo.text }}<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- v-bind:style='testingColors'--&gt;</span>
+    <span class="hljs-comment">&lt;!-- v-for="item in list" --&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">v-bind:disabled</span>=<span class="hljs-string">"itemA.length &lt; 5 "</span> <span class="hljs-attr">v-on:click</span>=<span class="hljs-string">"add_item"</span>&gt;</span>
+    send
+  <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+              <pre class="tCont CSS hljs"><span class="hljs-selector-class">.red</span> {<span class="hljs-attribute">border</span>: <span class="hljs-number">3px</span> solid red;}
+
+<span class="hljs-selector-class">.green</span> {<span class="hljs-attribute">border</span>: <span class="hljs-number">3px</span> solid green;}</pre>
+              <div class="tCont result " id="result">
+              </div>
+        </div>
+    </div>
+    
+  
+
+<div id="highlighter--hover-tools" style="display: none;">
+    <div id="highlighter--hover-tools--container">
+        <div class="highlighter--icon highlighter--icon-copy" title="Copy"></div>
+        <div class="highlighter--icon highlighter--icon-change-color" title="Change Color"></div>
+        <div class="highlighter--icon highlighter--icon-delete" title="Delete"></div>
+    </div>
+</div></body></html>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!-- Carlie van wyk u21672823 -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="www.namespaces.com">
+	<xs:element name="root">
+		<xs:complexType>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
+
+
+

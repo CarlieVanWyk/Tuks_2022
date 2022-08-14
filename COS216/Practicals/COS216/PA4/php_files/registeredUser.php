@@ -1,0 +1,275 @@
+<?php
+
+session_start();
+
+if(isset($_SESSION['username'])) {
+    $_SESSION['msg'] = "You must login first to view this page";
+    header("location: login.php");
+}
+
+if(isset($_GET['logout'])) {
+
+    session_destroy();
+    unset($_SESSION['username']);
+    header("location: login.php");
+}
+
+?>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Carlie van wyk u21672823 -->
+    <title>PA2 title</title>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Carlie van wyk" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../stylesheet1.css" rel="stylesheet" type="text/css" />
+    <link href="../stylesheet2.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+
+  <body class="dayNight">
+    <div id="preloader"></div>
+
+    <header id="header-PA2">
+      <div id="logo">
+        <a href="../../../index.php">
+          <figure>
+            <img src="../images/Artboard_1.png" alt="news website's logo" />
+          </figure>
+        </a>
+      </div>
+      <nav>
+        <div class="current"><a href="../today.html">Today </a></div>
+        <div><a href="../South_Africa.html">South Africa </a></div>
+        <div><a href="../covid.html"> Covid-19 </a></div>
+        <div><a href="../calendar.html">Calendar </a></div>
+      </nav>
+      <div id="login-signup">
+        <?php if(isset($_SESSION['username'])) : ?>
+            <div> <?php echo $_SESSION['username']; ?> </div>
+            <div><a href="registeredUser.php?logout='1'">Logout</a></div>
+        <?php endif ?>
+      </div>
+    </header>
+
+    <main id="main-today">
+      <div id="search_filter">
+        <div id="search-container">
+          <form>
+            <!-- <label for="article"></label> -->
+            <input
+              list="articles"
+              name="article"
+              id="article"
+              placeholder="search for article..."
+            />
+            <datalist id="articles">
+              <option id="article1" value=""></option>
+              <option id="article2" value=""></option>
+              <option id="article3" value=""></option>
+              <option id="article4" value=""></option>
+              <option id="article5" value=""></option>
+            </datalist>
+
+            <input type="submit" onclick="gotoArticle()" />
+          </form>
+        </div>
+
+        <div id="filter-container">
+          <label class="dropdown-label">Filter</label>
+
+          <div class="dropdown-list">
+            <label class="dropdown-option">
+              <input
+                type="checkbox"
+                name="dropdown-group"
+                value="Name"
+                onclick="filterToName()"
+              />
+              Name
+            </label>
+
+            <label class="dropdown-option">
+              <input
+                type="checkbox"
+                name="dropdown-group"
+                value="desription"
+                onclick="filterToDesc()"
+              />
+              Description
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div id="news_items">
+        <a
+          id="LOTR_link"
+          href="#"
+          target="_blank"
+          title="click to go to original article"
+        >
+          <article class="news_item" id="LOTR">
+            <div>
+              <h2>Lord of the Rings</h2>
+              <p>
+                The Lord of the Rings is a series of three epic fantasy
+                adventure films directed by Peter Jackson, based on the novel
+                written by J. R. R. Tolkien. The films are subtitled The
+                Fellowship of the Ring, The Two Towers, and The Return of the
+                King
+              </p>
+              <!-- <ul>
+              <li>Gandalf</li>
+              <li>Hobbits</li>
+              <li>J.R.R. Tolkien</li>
+            </ul> -->
+              <p class="datePub">Date published: 31 Des 2000</p>
+              <p class="author">Author: Peter Jackson</p>
+              <p>Category: Adventure</p>
+            </div>
+            <figure>
+              <img src="../images/lotr.jpg" alt="lotr" />
+            </figure>
+          </article>
+        </a>
+
+        <br />
+
+        <a
+          id="Wonderwoman_link"
+          href="#"
+          target="_blank"
+          title="click to go to original article"
+        >
+          <article class="news_item" id="wonderwoman">
+            <figure>
+              <img src="../images/wonderwoman.jpg" alt="ww" />
+            </figure>
+            <div>
+              <h2>Wonder woman</h2>
+              <p>
+                Raised on a sheltered island paradise, when a pilot crashes on
+                their shores and tells of a massive conflict raging in the
+                outside world, Diana leaves her home, convinced she can stop the
+                threat. Fighting alongside man in a war to end all wars, Diana
+                will discover her full powers and her true destiny.
+              </p>
+              <!-- <ul>
+              <li>Superhero</li>
+              <li>DC comics</li>
+              <li>Diana</li>
+            </ul> -->
+              <p class="dataPub">Date published: 6 March 2017</p>
+              <p class="author">Author: Petty Jenkins</p>
+              <p>Category: Superhero</p>
+            </div>
+          </article>
+        </a>
+
+        <br />
+
+        <a
+          id="Avatar_link"
+          href="#"
+          target="_blank"
+          title="click to go to original article"
+        >
+          <article class="news_item" id="Avatar">
+            <div>
+              <h2>Avatar</h2>
+              <p>
+                A paraplegic Marine dispatched to the moon Pandora on a unique
+                mission becomes torn between following his orders and protecting
+                the world he feels is his home. When his brother is killed in a
+                robbery, paraplegic Marine Jake Sully decides to take his place
+                in a mission on the distant world of Pandora.
+              </p>
+              <!-- <ul>
+              <li>Blue Aliens</li>
+              <li>Pandora</li>
+              <li>Jake Sully</li>
+            </ul> -->
+              <p class="dataPub">Date published: 10 July 2010</p>
+              <p class="author">Author: James Cameron</p>
+              <p>Category: Adventure</p>
+            </div>
+            <figure>
+              <img src="../images/avatar.png" alt="avatar" />
+            </figure>
+          </article>
+        </a>
+
+        <br />
+
+        <a
+          id="Arcane_link"
+          href="#"
+          target="_blank"
+          title="click to go to original article"
+        >
+          <article class="news_item" id="Arcane">
+            <figure>
+              <img src=".../images/arcane.jpg" alt="arcane" />
+            </figure>
+            <div>
+              <h2>Arcane</h2>
+              <p>
+                Amid the stark discord of twin cities Piltover and Zaun, two
+                sisters fight on rival sides of a war between magic technologies
+                and clashing convictions. Watch all you want. Hailee Steinfeld
+                and Kevin Alejandro lend voices to this immersive series based
+                on the lore of Riot Games' "League of Legends."
+              </p>
+              <!-- <ul>
+              <li>Powder</li>
+              <li>League of Legends</li>
+              <li>Hextech</li>
+            </ul> -->
+              <p class="dataPub">Date published: 10 July 2022</p>
+              <p class="author">Author: Pascal Charrue</p>
+              <p>Category: Animation</p>
+            </div>
+          </article>
+        </a>
+
+        <br />
+
+        <a
+          id="Batman_link"
+          href="#"
+          target="_blank"
+          title="click to go to original article"
+        >
+          <article class="news_item" id="Batman">
+            <div>
+              <h2>Batman</h2>
+              <p>
+                Batman v Superman: Dawn of Justice is the first live-action film
+                to feature Batman and Superman together, as well as the first
+                live-action cinematic portrayal of Wonder Woman. In the film,
+                criminal mastermind Lex Luthor manipulates Batman into a
+                preemptive battle with Superman, with whom Luthor is obsessed.
+              </p>
+              <!-- <ul>
+              <li>DC comics</li>
+              <li>Batman</li>
+              <li>Superman</li>
+            </ul> -->
+              <p class="dataPub">Date published: 7 July 2015</p>
+              <p class="author">Author: Zack Snyder</p>
+              <p>Category: Superhero</p>
+            </div>
+            <figure>
+              <img src="../images/batman.jpg" alt="batman" />
+            </figure>
+          </article>
+        </a>
+      </div>
+    </main>
+
+    <script src="../scriptToday.js"></script>
+  </body>
+</html>

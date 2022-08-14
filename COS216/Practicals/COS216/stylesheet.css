@@ -1,0 +1,74 @@
+/* Carlie van wyk u21672823 */
+
+/* Background image-black and white: Photo by Ashim D’Silva on Unsplash */
+/* Background image-cloudy color:Photo by Captureson Photography on Unsplash */
+/* Background image-sunset color:Photo by Dewet Willemse on Unsplash */
+
+/*__________________________________day night theme_________________________________*/
+.dayNight {
+  background-image: url("images/captureson-photography-gq_9Lq8oNYc-unsplash.jpg");
+}
+.dayNight.change {
+  background-image: url("images/darkTheme.jpg");
+}
+
+/*__________________________________All pages_________________________________*/
+body {
+  /* background-image: url("images/captureson-photography-gq_9Lq8oNYc-unsplash.jpg"); */
+  background-size: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.726);
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav div {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  margin: 2px;
+  border-radius: 10px;
+}
+
+nav div a {
+  text-decoration: none;
+  color: black;
+}
+
+nav div:hover a {
+  color: white;
+}
+
+nav div:hover {
+  background-color: #000000;
+}
+
+.current {
+  background-color: #000000;
+}
+
+.current a {
+  color: white;
+}
+
+/*_____________________________________________________________________________________ Index.html */
+#main-home figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#main-home figure img {
+  width: 40%;
+  opacity: 90%;
+}
+
+/*________________________________________________________________________________footer*/
+#footer {
+  text-align: center;
+  margin-top: 15%;
+}

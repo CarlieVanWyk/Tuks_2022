@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<!-- Carlie van wyk u21672823 -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="schedule">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="event" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="user" type="xs:string"></xs:attribute>	
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="event">
+		<xs:complexType>
+			<xs:sequence>
+					
+					<xs:element name="title">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="25"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name = "type">
+					   <xs:simpleType>
+					      <xs:restriction base = "xs:string">
+					         <xs:enumeration value = "Event"/>
+					         <xs:enumeration value = "Task"/>
+					         <xs:enumeration value = "Appointment"/>
+					      </xs:restriction>
+					   </xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="date">
+						<xs:complexType>
+							<xs:sequence>
+								
+								<xs:element name="day">
+									<xs:simpleType>
+										<xs:restriction base="xs:integer">
+											<xs:minInclusive value="1"/>
+											<xs:maxInclusive value="31"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:element>
+								
+								<xs:element name = "month">
+								   <xs:simpleType>
+								      <xs:restriction base = "xs:string">
+								         <xs:enumeration value = "January"/>
+								         <xs:enumeration value = "February"/>
+								         <xs:enumeration value = "March"/>
+								         <xs:enumeration value = "April"/>
+								         <xs:enumeration value = "May"/>
+								         <xs:enumeration value = "June"/>
+								         <xs:enumeration value = "July"/>
+								         <xs:enumeration value = "August"/>
+								         <xs:enumeration value = "September"/>
+								         <xs:enumeration value = "October"/>
+								         <xs:enumeration value = "November"/>
+								         <xs:enumeration value = "December"/>
+								      </xs:restriction>
+								   </xs:simpleType>
+								</xs:element>
+								
+								<xs:element name="startingTime" minOccurs="0">
+									<xs:simpleType>
+										<xs:restriction base="xs:string">
+											<xs:maxLength value="5"/>
+										    <xs:enumeration value="AM"/>
+										    <xs:enumeration value="PM"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:element>
+								
+								<xs:element name="endingTime" minOccurs="0">
+									<xs:simpleType>
+										<xs:restriction base="xs:string">
+											<xs:maxLength value="5"/>
+										    <xs:enumeration value="AM"/>
+										    <xs:enumeration value="PM"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:element>
+								
+							</xs:sequence>
+							<xs:attribute name="repeat" type="date_repeat_att"></xs:attribute>
+						</xs:complexType>
+					</xs:element>
+					
+					<xs:element name="guests">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="guest" maxOccurs="10">
+									<xs:complexType>
+										<xs:choice>
+								
+											<xs:element name="name" minOccurs="0">
+												<xs:simpleType>
+													<xs:restriction base="xs:string">
+														<xs:maxLength value="50"/>
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:element>
+								
+											<xs:element name="email" minOccurs="0">
+												<xs:simpleType>
+													<xs:restriction base="xs:string">
+														<xs:maxLength value="50"/>
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:element>
+								
+										</xs:choice>
+
+									</xs:complexType>
+								
+								</xs:element>
+							</xs:sequence>
+
+						</xs:complexType>
+					</xs:element>
+					
+					<xs:element name="venue">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="25"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					
+					<xs:element name="description">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="255"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+						
+			</xs:sequence>
+			<xs:attribute name="id" type="event_id_att" use="required"></xs:attribute>	
+		</xs:complexType>	
+	</xs:element>
+	
+	<xs:simpleType name="event_id_att" id="ID">
+		<xs:restriction base="xs:NCName">
+			<xs:length value="9"></xs:length>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="date_repeat_att">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value = "Daily"/>
+			<xs:enumeration value = "Weekly"/>
+			<xs:enumeration value = "Monthly"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+</xs:schema>
+
+
+

@@ -1,0 +1,61 @@
+<!-- carlie van wyk u21672823 -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Send messages</title>
+    <style>
+      /* .state {
+        display: flex;
+        flex-direction: column;
+        background-color: blue;
+      } */
+      #content {
+        background-color: palevioletred;
+        border-radius: 10px;
+        border-bottom: rgb(243, 39, 73) solid 2px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      #input {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app">
+      <h1>Post mesages here:</h1>
+      <div id="content">
+        <div
+          class="state"
+          v-for="(messages,index) in messages"
+          style="font-size: larger"
+        >
+          {{messages}}
+        </div>
+        <div class="state" v-for="(users,index) in users">
+          <small>{{users}}</small>
+        </div>
+        <div class="state" v-for="(timestamps,index) in timestamps">
+          <small>{{timestamps}}</small>
+        </div>
+      </div>
+
+      <!-- <div v-for="(thePersons,index) in thePersons">{{thePersons}}</div> -->
+
+      <!-- <p>Input User: <input-comp1></input-comp1></p> -->
+      <!-- <p>Input User and Message: <input-comp2></input-comp2></p> -->
+      <div id="input">
+        <input-comp2></input-comp2>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://unpkg.com/vuex@next"></script>
+    <script src="prac4.js"></script>
+  </body>
+</html>

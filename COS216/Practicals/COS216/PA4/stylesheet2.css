@@ -1,0 +1,168 @@
+/* Carlie van wyk u21672823 */
+
+/*___________________________________________________________________________________________________today */
+/*________________________________________________________________________articles*/
+#LOTR_link {
+  text-decoration: none;
+  color: black;
+}
+
+#Wonderwoman_link {
+  text-decoration: none;
+  color: black;
+}
+
+#Avatar_link {
+  text-decoration: none;
+  color: black;
+}
+
+#Arcane_link {
+  text-decoration: none;
+  color: black;
+}
+
+#Batman_link {
+  text-decoration: none;
+  color: black;
+}
+/*________________________________________________________________________preloader*/
+
+#preloader {
+  background: #000000 url(images/preloader.gif) no-repeat center center;
+  background-size: 20%;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
+
+/* _______________________________________________________________________search functionality */
+
+/*___________________________________________________________________________________________________calendar*/
+#calendarContainer {
+  margin-top: 50px;
+  margin-left: 15%;
+  margin-right: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#jan,
+#feb,
+#mar,
+#apr,
+#may,
+#jun,
+#jul,
+#aug,
+#sep,
+#oct,
+#nov,
+#dec {
+  flex-grow: 1;
+}
+
+.topRibbon {
+  display: flex;
+  justify-content: space-between;
+}
+
+.topRibbon .month {
+  text-align: center;
+}
+
+.topRibbon > .prev {
+  display: flex;
+  align-items: center;
+  background-color: #ff0044;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding: 2%;
+  border-radius: 50%;
+}
+
+.topRibbon > .next {
+  display: flex;
+  align-items: center;
+  background-color: #ff0044;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding: 2%;
+  border-radius: 50%;
+}
+
+.bottomSection {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.bottomSection > .days {
+  display: flex;
+  justify-content: space-around;
+}
+
+.bottomSection > .dayNumbers {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+}
+
+.bottomSection > .dayNumbers > div {
+  padding: 15%;
+  border-radius: 10px;
+}
+
+.bottomSection > .dayNumbers > div:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/*___________________________________________________________________________________________________SA */
+/*________________________________________________________________________articles*/
+#Nature_link {
+  text-decoration: none;
+  color: black;
+}
+
+#Politics_link {
+  text-decoration: none;
+  color: black;
+}
+#People_link {
+  text-decoration: none;
+  color: black;
+}
+#Sport_link {
+  text-decoration: none;
+  color: black;
+}
+#Food_link {
+  text-decoration: none;
+  color: black;
+}
+
+/*______________________________________________________________________________________________________covid*/
+#covidStatsDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.726);
+  border-radius: 10px;
+}
+
+#loopTextDiv {
+  background: #ff0044;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+}
+
+.rollingText {
+  color: black;
+  font-weight: bold;
+  white-space: nowrap;
+  clear: both;
+  float: left;
+}

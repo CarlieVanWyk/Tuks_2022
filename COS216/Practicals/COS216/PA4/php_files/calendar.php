@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Carlie van wyk u21672823 -->
+    <title>PA4 calendar</title>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Carlie van wyk" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../stylesheet1.css" rel="stylesheet" type="text/css" />
+    <link href="../stylesheet2.css" rel="stylesheet" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+
+  <body class="dayNight">
+    <div id="preloader"></div>
+
+    <header id="header-PA2">
+      <div id="logo">
+        <a href="../../../index.php">
+          <figure>
+            <img src="../images/Artboard_1.png" alt="news_website's_logo" />
+          </figure>
+        </a>
+      </div>
+      <nav>
+        <div><a href="today.php">Today </a></div>
+        <div><a href="South_Africa.php">South Africa </a></div>
+        <div><a href="covid.php"> Covid-19 </a></div>
+        <div class="current"><a href="calendar.php">Calendar </a></div>
+      </nav>
+      <div id="login-signup">
+        <div><a href="logout.php">Logout</a></div>
+      </div>
+    </header>
+
+    <div id="calendarContainer">
+      <div id="jan">
+        <div class="topRibbon">
+          <button class="prev">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+          </button>
+          <div class="month">
+            <h2>January</h2>
+            <h3>2022</h3>
+          </div>
+          <button class="next" onclick="nextMonJan()">
+            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="bottomSection">
+          <div class="days">
+            <h3>Sunday</h3>
+            <h3>Monday</h3>
+            <h3>Tuesday</h3>
+            <h3>Wednesday</h3>
+            <h3>Thursday</h3>
+            <h3>Friday</h3>
+            <h3>Saturday</h3>
+          </div>
+          <div class="dayNumbers" id="0">
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild">1</div>
+            <div class="dayNumbersChild">2</div>
+            <div class="dayNumbersChild">3</div>
+            <div class="dayNumbersChild">4</div>
+            <div class="dayNumbersChild">5</div>
+            <div class="dayNumbersChild">6</div>
+            <div class="dayNumbersChild">7</div>
+            <div class="dayNumbersChild">8</div>
+            <div class="dayNumbersChild">9</div>
+            <div class="dayNumbersChild">10</div>
+            <div class="dayNumbersChild">11</div>
+            <div class="dayNumbersChild">12</div>
+            <div class="dayNumbersChild">13</div>
+            <div class="dayNumbersChild">14</div>
+            <div class="dayNumbersChild">15</div>
+            <div class="dayNumbersChild">16</div>
+            <div class="dayNumbersChild">17</div>
+            <div class="dayNumbersChild">18</div>
+            <div class="dayNumbersChild">19</div>
+            <div class="dayNumbersChild">20</div>
+            <div class="dayNumbersChild">21</div>
+            <div class="dayNumbersChild">22</div>
+            <div class="dayNumbersChild">23</div>
+            <div class="dayNumbersChild">24</div>
+            <div class="dayNumbersChild">25</div>
+            <div class="dayNumbersChild">26</div>
+            <div class="dayNumbersChild">27</div>
+            <div class="dayNumbersChild">28</div>
+            <div class="dayNumbersChild">29</div>
+            <div class="dayNumbersChild">30</div>
+            <div class="dayNumbersChild">31</div>
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild"></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="feb">
+        <div class="topRibbon">
+          <button class="prev" onclick="prevMonFeb()">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+          </button>
+          <div class="month">
+            <h2>Febraury</h2>
+            <h4>2022</h4>
+          </div>
+          <button class="next" onclick="nextMonFeb()">
+            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="bottomSection">
+          <div class="days">
+            <h3>Sunday</h3>
+            <h3>Monday</h3>
+            <h3>Tuesday</h3>
+            <h3>Wednesday</h3>
+            <h3>Thursday</h3>
+            <h3>Friday</h3>
+            <h3>Saturday</h3>
+          </div>
+          <div class="dayNumbers" id="1">
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild">1</div>
+            <div class="dayNumbersChild">2</div>
+            <div class="dayNumbersChild">3</div>
+            <div class="dayNumbersChild">4</div>
+            <div class="dayNumbersChild">5</div>
+            <div class="dayNumbersChild">6</div>
+            <div class="dayNumbersChild">7</div>
+            <div class="dayNumbersChild">8</div>
+            <div class="dayNumbersChild">9</div>
+            <div class="dayNumbersChild">10</div>
+            <div class="dayNumbersChild">11</div>
+            <div class="dayNumbersChild">12</div>
+            <div class="dayNumbersChild">13</div>
+            <div class="dayNumbersChild">14</div>
+            <div class="dayNumbersChild">15</div>
+            <div class="dayNumbersChild">16</div>
+            <div class="dayNumbersChild">17</div>
+            <div class="dayNumbersChild">18</div>
+            <div class="dayNumbersChild">19</div>
+            <div class="dayNumbersChild">20</div>
+            <div class="dayNumbersChild">21</div>
+            <div class="dayNumbersChild">22</div>
+            <div class="dayNumbersChild">23</div>
+            <div class="dayNumbersChild">24</div>
+            <div class="dayNumbersChild">25</div>
+            <div class="dayNumbersChild">26</div>
+            <div class="dayNumbersChild">27</div>
+            <div class="dayNumbersChild">28</div>
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild"></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="mar">
+        <div class="topRibbon">
+          <button class="prev" onclick="prevMonMar()">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+          </button>
+          <div class="month">
+            <h2>March</h2>
+            <h4>2022</h4>
+          </div>
+          <button class="next" onclick="nextMonMar()">
+            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="bottomSection">
+          <div class="days">
+            <h3>Sunday</h3>
+            <h3>Monday</h3>
+            <h3>Tuesday</h3>
+            <h3>Wednesday</h3>
+            <h3>Thursday</h3>
+            <h3>Friday</h3>
+            <h3>Saturday</h3>
+          </div>
+          <div class="dayNumbers" id="2">
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild">1</div>
+            <div class="dayNumbersChild">2</div>
+            <div class="dayNumbersChild">3</div>
+            <div class="dayNumbersChild">4</div>
+            <div class="dayNumbersChild">5</div>
+            <div class="dayNumbersChild">6</div>
+            <div class="dayNumbersChild">7</div>
+            <div class="dayNumbersChild">8</div>
+            <div class="dayNumbersChild">9</div>
+            <div class="dayNumbersChild">10</div>
+            <div class="dayNumbersChild">11</div>
+            <div class="dayNumbersChild">12</div>
+            <div class="dayNumbersChild">13</div>
+            <div class="dayNumbersChild">14</div>
+            <div class="dayNumbersChild">15</div>
+            <div class="dayNumbersChild">16</div>
+            <div class="dayNumbersChild">17</div>
+            <div class="dayNumbersChild">18</div>
+            <div class="dayNumbersChild">19</div>
+            <div class="dayNumbersChild">20</div>
+            <div class="dayNumbersChild">21</div>
+            <div class="dayNumbersChild">22</div>
+            <div class="dayNumbersChild">23</div>
+            <div class="dayNumbersChild">24</div>
+            <div class="dayNumbersChild">25</div>
+            <div class="dayNumbersChild">26</div>
+            <div class="dayNumbersChild">27</div>
+            <div class="dayNumbersChild">28</div>
+            <div class="dayNumbersChild">29</div>
+            <div class="dayNumbersChild">30</div>
+            <div class="dayNumbersChild">31</div>
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild"></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="apr">
+        <div class="topRibbon">
+          <button class="prev" onclick="prevMonApr()">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+          </button>
+          <div class="month">
+            <h2>April</h2>
+            <h4>2022</h4>
+          </div>
+          <button class="next" onclick="nextMonApr()">
+            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="bottomSection">
+          <div class="days">
+            <h3>Sunday</h3>
+            <h3>Monday</h3>
+            <h3>Tuesday</h3>
+            <h3>Wednesday</h3>
+            <h3>Thursday</h3>
+            <h3>Friday</h3>
+            <h3>Saturday</h3>
+          </div>
+          <div class="dayNumbers" id="3">
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild">1</div>
+            <div class="dayNumbersChild">2</div>
+            <div class="dayNumbersChild">3</div>
+            <div class="dayNumbersChild">4</div>
+            <div class="dayNumbersChild">5</div>
+            <div class="dayNumbersChild">6</div>
+            <div class="dayNumbersChild">7</div>
+            <div class="dayNumbersChild">8</div>
+            <div class="dayNumbersChild">9</div>
+            <div class="dayNumbersChild">10</div>
+            <div class="dayNumbersChild">11</div>
+            <div class="dayNumbersChild">12</div>
+            <div class="dayNumbersChild">13</div>
+            <div class="dayNumbersChild">14</div>
+            <div class="dayNumbersChild">15</div>
+            <div class="dayNumbersChild">16</div>
+            <div class="dayNumbersChild">17</div>
+            <div class="dayNumbersChild">18</div>
+            <div class="dayNumbersChild">19</div>
+            <div class="dayNumbersChild">20</div>
+            <div class="dayNumbersChild">21</div>
+            <div class="dayNumbersChild">22</div>
+            <div class="dayNumbersChild">23</div>
+            <div class="dayNumbersChild">24</div>
+            <div class="dayNumbersChild">25</div>
+            <div class="dayNumbersChild">26</div>
+            <div class="dayNumbersChild">27</div>
+            <div class="dayNumbersChild">28</div>
+            <div class="dayNumbersChild">29</div>
+            <div class="dayNumbersChild">30</div>
+          </div>
+        </div>
+      </div>
+
+      <div id="may">
+        <div class="topRibbon">
+          <button class="prev" onclick="prevMonMay()">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+          </button>
+          <div class="month">
+            <h2>May</h2>
+            <h3>2022</h3>
+          </div>
+          <button class="next" onclick="nextMonMay()">
+            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="bottomSection">
+          <div class="days">
+            <h3>Sunday</h3>
+            <h3>Monday</h3>
+            <h3>Tuesday</h3>
+            <h3>Wednesday</h3>
+            <h3>Thursday</h3>
+            <h3>Friday</h3>
+            <h3>Saturday</h3>
+          </div>
+          <div class="dayNumbers" id="4">
+            <div class="dayNumbersChild">1</div>
+            <div class="dayNumbersChild">2</div>
+            <div class="dayNumbersChild">3</div>
+            <div class="dayNumbersChild">4</div>
+            <div class="dayNumbersChild">5</div>
+            <div class="dayNumbersChild">6</div>
+            <div class="dayNumbersChild">7</div>
+            <div class="dayNumbersChild">8</div>
+            <div class="dayNumbersChild">9</div>
+            <div class="dayNumbersChild">10</div>
+            <div class="dayNumbersChild">11</div>
+            <div class="dayNumbersChild">12</div>
+            <div class="dayNumbersChild">13</div>
+            <div class="dayNumbersChild">14</div>
+            <div class="dayNumbersChild">15</div>
+            <div class="dayNumbersChild">16</div>
+            <div class="dayNumbersChild">17</div>
+            <div class="dayNumbersChild">18</div>
+            <div class="dayNumbersChild">19</div>
+            <div class="dayNumbersChild">20</div>
+            <div class="dayNumbersChild">21</div>
+            <div class="dayNumbersChild">22</div>
+            <div class="dayNumbersChild">23</div>
+            <div class="dayNumbersChild">24</div>
+            <div class="dayNumbersChild">25</div>
+            <div class="dayNumbersChild">26</div>
+            <div class="dayNumbersChild">27</div>
+            <div class="dayNumbersChild">28</div>
+            <div class="dayNumbersChild">29</div>
+            <div class="dayNumbersChild">30</div>
+            <div class="dayNumbersChild">31</div>
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild"></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="jun">
+        <div class="topRibbon">
+          <button class="prev" onclick="prevMonJun()">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+          </button>
+          <div class="month">
+            <h2>June</h2>
+            <h3>2022</h3>
+          </div>
+          <button class="next" onclick="nextMonJun()">
+            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="bottomSection">
+          <div class="days">
+            <h3>Sunday</h3>
+            <h3>Monday</h3>
+            <h3>Tuesday</h3>
+            <h3>Wednesday</h3>
+            <h3>Thursday</h3>
+            <h3>Friday</h3>
+            <h3>Saturday</h3>
+          </div>
+          <div class="dayNumbers" id="5">
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild">1</div>
+            <div class="dayNumbersChild">2</div>
+            <div class="dayNumbersChild">3</div>
+            <div class="dayNumbersChild">4</div>
+            <div class="dayNumbersChild">5</div>
+            <div class="dayNumbersChild">6</div>
+            <div class="dayNumbersChild">7</div>
+            <div class="dayNumbersChild">8</div>
+            <div class="dayNumbersChild">9</div>
+            <div class="dayNumbersChild">10</div>
+            <div class="dayNumbersChild">11</div>
+            <div class="dayNumbersChild">12</div>
+            <div class="dayNumbersChild">13</div>
+            <div class="dayNumbersChild">14</div>
+            <div class="dayNumbersChild">15</div>
+            <div class="dayNumbersChild">16</div>
+            <div class="dayNumbersChild">17</div>
+            <div class="dayNumbersChild">18</div>
+            <div class="dayNumbersChild">19</div>
+            <div class="dayNumbersChild">20</div>
+            <div class="dayNumbersChild">21</div>
+            <div class="dayNumbersChild">22</div>
+            <div class="dayNumbersChild">23</div>
+            <div class="dayNumbersChild">24</div>
+            <div class="dayNumbersChild">25</div>
+            <div class="dayNumbersChild">26</div>
+            <div class="dayNumbersChild">27</div>
+            <div class="dayNumbersChild">28</div>
+            <div class="dayNumbersChild">29</div>
+            <div class="dayNumbersChild">30</div>
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild"></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="jul">
+        <div class="topRibbon">
+          <button class="prev" onclick="prevMonJul()">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+          </button>
+          <div class="month">
+            <h2>July</h2>
+            <h3>2022</h3>
+          </div>
+          <button class="next" onclick="nextMonJul()">
+            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="bottomSection">
+          <div class="days">
+            <h3>Sunday</h3>
+            <h3>Monday</h3>
+            <h3>Tuesday</h3>
+            <h3>Wednesday</h3>
+            <h3>Thursday</h3>
+            <h3>Friday</h3>
+            <h3>Saturday</h3>
+          </div>
+          <div class="dayNumbers" id="6">
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild">1</div>
+            <div class="dayNumbersChild">2</div>
+            <div class="dayNumbersChild">3</div>
+            <div class="dayNumbersChild">4</div>
+            <div class="dayNumbersChild">5</div>
+            <div class="dayNumbersChild">6</div>
+            <div class="dayNumbersChild">7</div>
+            <div class="dayNumbersChild">8</div>
+            <div class="dayNumbersChild">9</div>
+            <div class="dayNumbersChild">10</div>
+            <div class="dayNumbersChild">11</div>
+            <div class="dayNumbersChild">12</div>
+            <div class="dayNumbersChild">13</div>
+            <div class="dayNumbersChild">14</div>
+            <div class="dayNumbersChild">15</div>
+            <div class="dayNumbersChild">16</div>
+            <div class="dayNumbersChild">17</div>
+            <div class="dayNumbersChild">18</div>
+            <div class="dayNumbersChild">19</div>
+            <div class="dayNumbersChild">20</div>
+            <div class="dayNumbersChild">21</div>
+            <div class="dayNumbersChild">22</div>
+            <div class="dayNumbersChild">23</div>
+            <div class="dayNumbersChild">24</div>
+            <div class="dayNumbersChild">25</div>
+            <div class="dayNumbersChild">26</div>
+            <div class="dayNumbersChild">27</div>
+            <div class="dayNumbersChild">28</div>
+            <div class="dayNumbersChild">29</div>
+            <div class="dayNumbersChild">30</div>
+            <div class="dayNumbersChild">31</div>
+          </div>
+        </div>
+      </div>
+
+      <div id="aug">
+        <div class="topRibbon">
+          <button class="prev" onclick="prevMonAug()">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+          </button>
+          <div class="month">
+            <h2>August</h2>
+            <h3>2022</h3>
+          </div>
+          <button class="next" onclick="nextMonAug()">
+            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="bottomSection">
+          <div class="days">
+            <h3>Sunday</h3>
+            <h3>Monday</h3>
+            <h3>Tuesday</h3>
+            <h3>Wednesday</h3>
+            <h3>Thursday</h3>
+            <h3>Friday</h3>
+            <h3>Saturday</h3>
+          </div>
+          <div class="dayNumbers" id="7">
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild">1</div>
+            <div class="dayNumbersChild">2</div>
+            <div class="dayNumbersChild">3</div>
+            <div class="dayNumbersChild">4</div>
+            <div class="dayNumbersChild">5</div>
+            <div class="dayNumbersChild">7</div>
+            <div class="dayNumbersChild">8</div>
+            <div class="dayNumbersChild">9</div>
+            <div class="dayNumbersChild">10</div>
+            <div class="dayNumbersChild">11</div>
+            <div class="dayNumbersChild">12</div>
+            <div class="dayNumbersChild">13</div>
+            <div class="dayNumbersChild">14</div>
+            <div class="dayNumbersChild">15</div>
+            <div class="dayNumbersChild">16</div>
+            <div class="dayNumbersChild">17</div>
+            <div class="dayNumbersChild">18</div>
+            <div class="dayNumbersChild">19</div>
+            <div class="dayNumbersChild">20</div>
+            <div class="dayNumbersChild">21</div>
+            <div class="dayNumbersChild">22</div>
+            <div class="dayNumbersChild">23</div>
+            <div class="dayNumbersChild">24</div>
+            <div class="dayNumbersChild">25</div>
+            <div class="dayNumbersChild">26</div>
+            <div class="dayNumbersChild">27</div>
+            <div class="dayNumbersChild">28</div>
+            <div class="dayNumbersChild">29</div>
+            <div class="dayNumbersChild">30</div>
+            <div class="dayNumbersChild">31</div>
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild"></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="sep">
+        <div class="topRibbon">
+          <button class="prev" onclick="prevMonSep()">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+          </button>
+          <div class="month">
+            <h2>September</h2>
+            <h3>2022</h3>
+          </div>
+          <button class="next" onclick="nextMonSep()">
+            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="bottomSection">
+          <div class="days">
+            <h3>Sunday</h3>
+            <h3>Monday</h3>
+            <h3>Tuesday</h3>
+            <h3>Wednesday</h3>
+            <h3>Thursday</h3>
+            <h3>Friday</h3>
+            <h3>Saturday</h3>
+          </div>
+          <div class="dayNumbers" id="8">
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild">1</div>
+            <div class="dayNumbersChild">2</div>
+            <div class="dayNumbersChild">3</div>
+            <div class="dayNumbersChild">4</div>
+            <div class="dayNumbersChild">5</div>
+            <div class="dayNumbersChild">6</div>
+            <div class="dayNumbersChild">7</div>
+            <div class="dayNumbersChild">8</div>
+            <div class="dayNumbersChild">9</div>
+            <div class="dayNumbersChild">10</div>
+            <div class="dayNumbersChild">11</div>
+            <div class="dayNumbersChild">12</div>
+            <div class="dayNumbersChild">13</div>
+            <div class="dayNumbersChild">14</div>
+            <div class="dayNumbersChild">15</div>
+            <div class="dayNumbersChild">16</div>
+            <div class="dayNumbersChild">17</div>
+            <div class="dayNumbersChild">18</div>
+            <div class="dayNumbersChild">19</div>
+            <div class="dayNumbersChild">20</div>
+            <div class="dayNumbersChild">21</div>
+            <div class="dayNumbersChild">22</div>
+            <div class="dayNumbersChild">23</div>
+            <div class="dayNumbersChild">24</div>
+            <div class="dayNumbersChild">25</div>
+            <div class="dayNumbersChild">26</div>
+            <div class="dayNumbersChild">27</div>
+            <div class="dayNumbersChild">28</div>
+            <div class="dayNumbersChild">29</div>
+            <div class="dayNumbersChild">30</div>
+            <div class="dayNumbersChild"></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="oct">
+        <div class="topRibbon">
+          <button class="prev" onclick="prevMonOct()">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+          </button>
+          <div class="month">
+            <h2>October</h2>
+            <h3>2022</h3>
+          </div>
+          <button class="next" onclick="nextMonOct()">
+            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="bottomSection">
+          <div class="days">
+            <h3>Sunday</h3>
+            <h3>Monday</h3>
+            <h3>Tuesday</h3>
+            <h3>Wednesday</h3>
+            <h3>Thursday</h3>
+            <h3>Friday</h3>
+            <h3>Saturday</h3>
+          </div>
+          <div class="dayNumbers" id="9">
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild">1</div>
+            <div class="dayNumbersChild">2</div>
+            <div class="dayNumbersChild">3</div>
+            <div class="dayNumbersChild">4</div>
+            <div class="dayNumbersChild">5</div>
+            <div class="dayNumbersChild">6</div>
+            <div class="dayNumbersChild">7</div>
+            <div class="dayNumbersChild">8</div>
+            <div class="dayNumbersChild">9</div>
+            <div class="dayNumbersChild">10</div>
+            <div class="dayNumbersChild">11</div>
+            <div class="dayNumbersChild">12</div>
+            <div class="dayNumbersChild">13</div>
+            <div class="dayNumbersChild">14</div>
+            <div class="dayNumbersChild">15</div>
+            <div class="dayNumbersChild">16</div>
+            <div class="dayNumbersChild">17</div>
+            <div class="dayNumbersChild">18</div>
+            <div class="dayNumbersChild">19</div>
+            <div class="dayNumbersChild">20</div>
+            <div class="dayNumbersChild">21</div>
+            <div class="dayNumbersChild">22</div>
+            <div class="dayNumbersChild">23</div>
+            <div class="dayNumbersChild">24</div>
+            <div class="dayNumbersChild">25</div>
+            <div class="dayNumbersChild">26</div>
+            <div class="dayNumbersChild">27</div>
+            <div class="dayNumbersChild">28</div>
+            <div class="dayNumbersChild">29</div>
+            <div class="dayNumbersChild">30</div>
+            <div class="dayNumbersChild">31</div>
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild"></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="nov">
+        <div class="topRibbon">
+          <button class="prev" onclick="prevMonNov()">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+          </button>
+          <div class="month">
+            <h2>November</h2>
+            <h3>2022</h3>
+          </div>
+          <button class="next" onclick="nextMonNov()">
+            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="bottomSection">
+          <div class="days">
+            <h3>Sunday</h3>
+            <h3>Monday</h3>
+            <h3>Tuesday</h3>
+            <h3>Wednesday</h3>
+            <h3>Thursday</h3>
+            <h3>Friday</h3>
+            <h3>Saturday</h3>
+          </div>
+          <div class="dayNumbers" id="10">
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild">1</div>
+            <div class="dayNumbersChild">2</div>
+            <div class="dayNumbersChild">3</div>
+            <div class="dayNumbersChild">4</div>
+            <div class="dayNumbersChild">5</div>
+            <div class="dayNumbersChild">6</div>
+            <div class="dayNumbersChild">7</div>
+            <div class="dayNumbersChild">8</div>
+            <div class="dayNumbersChild">9</div>
+            <div class="dayNumbersChild">10</div>
+            <div class="dayNumbersChild">11</div>
+            <div class="dayNumbersChild">12</div>
+            <div class="dayNumbersChild">13</div>
+            <div class="dayNumbersChild">14</div>
+            <div class="dayNumbersChild">15</div>
+            <div class="dayNumbersChild">16</div>
+            <div class="dayNumbersChild">17</div>
+            <div class="dayNumbersChild">18</div>
+            <div class="dayNumbersChild">19</div>
+            <div class="dayNumbersChild">20</div>
+            <div class="dayNumbersChild">21</div>
+            <div class="dayNumbersChild">22</div>
+            <div class="dayNumbersChild">23</div>
+            <div class="dayNumbersChild">24</div>
+            <div class="dayNumbersChild">25</div>
+            <div class="dayNumbersChild">26</div>
+            <div class="dayNumbersChild">27</div>
+            <div class="dayNumbersChild">28</div>
+            <div class="dayNumbersChild">29</div>
+            <div class="dayNumbersChild">30</div>
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild"></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="dec">
+        <div class="topRibbon">
+          <button class="prev" onclick="prevMonDec()">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+          </button>
+          <div class="month">
+            <h2>December</h2>
+            <h3>2022</h3>
+          </div>
+          <button class="next">
+            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="bottomSection">
+          <div class="days">
+            <h3>Sunday</h3>
+            <h3>Monday</h3>
+            <h3>Tuesday</h3>
+            <h3>Wednesday</h3>
+            <h3>Thursday</h3>
+            <h3>Friday</h3>
+            <h3>Saturday</h3>
+          </div>
+          <div class="dayNumbers" id="11">
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild"></div>
+            <div class="dayNumbersChild">1</div>
+            <div class="dayNumbersChild">2</div>
+            <div class="dayNumbersChild">3</div>
+            <div class="dayNumbersChild">4</div>
+            <div class="dayNumbersChild">5</div>
+            <div class="dayNumbersChild">6</div>
+            <div class="dayNumbersChild">7</div>
+            <div class="dayNumbersChild">8</div>
+            <div class="dayNumbersChild">9</div>
+            <div class="dayNumbersChild">10</div>
+            <div class="dayNumbersChild">11</div>
+            <div class="dayNumbersChild">12</div>
+            <div class="dayNumbersChild">13</div>
+            <div class="dayNumbersChild">14</div>
+            <div class="dayNumbersChild">15</div>
+            <div class="dayNumbersChild">16</div>
+            <div class="dayNumbersChild">17</div>
+            <div class="dayNumbersChild">18</div>
+            <div class="dayNumbersChild">19</div>
+            <div class="dayNumbersChild">20</div>
+            <div class="dayNumbersChild">21</div>
+            <div class="dayNumbersChild">22</div>
+            <div class="dayNumbersChild">23</div>
+            <div class="dayNumbersChild">24</div>
+            <div class="dayNumbersChild">25</div>
+            <div class="dayNumbersChild">26</div>
+            <div class="dayNumbersChild">27</div>
+            <div class="dayNumbersChild">28</div>
+            <div class="dayNumbersChild">29</div>
+            <div class="dayNumbersChild">30</div>
+            <div class="dayNumbersChild">31</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div id="jan">
+        <button onclick="nextMon()">hello Jan</button>
+      </div>
+      <div id="feb">
+        <button onclick="prevMon()">hello Feb</button>
+      </div> -->
+    </div>
+
+    <script src="../scriptCalPHP.js"></script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+<!-- Carlie van Wyk, u21672823 -->
+<!ELEMENT meal (breakfast+, lunch+, dinner+, dessert?)*>
+
+<!ELEMENT breakfast (name?, cost?)>
+<!ATTLIST breakfast id ID #IMPLIED>                 <!--??-->
+
+<!ELEMENT lunch (name?, cost?)>
+<!ATTLIST lunch id ID #IMPLIED>                 <!--??-->
+<!ATTLIST lunch after CDATA #IMPLIED>                           <!--??-->
+
+<!ELEMENT dinner (name?, cost?)>
+<!ATTLIST dinner id ID #IMPLIED>                 <!--??-->
+
+<!ELEMENT dessert EMPTY>
+
+<!ELEMENT name (#PCDATA)>
+
+<!ELEMENT cost (#PCDATA)>
+<!ATTLIST cost cur (ZAR | USD) #REQUIRED>                 <!--??-->

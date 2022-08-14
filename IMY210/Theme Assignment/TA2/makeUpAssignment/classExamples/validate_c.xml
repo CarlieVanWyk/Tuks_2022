@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE meal [
+	<!ELEMENT meal (food)+>
+	<!ELEMENT food (name,cost)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT cost (#PCDATA)>
+	<!ATTLIST food id ID #REQUIRED>
+	<!ATTLIST cost cur (ZAR|USD) #IMPLIED>
+]>
+
+<meal>
+	<food id="b102">
+		<name>Toast</name>
+		<cost cur="ZAR">30</cost> 
+	</food>
+</meal>

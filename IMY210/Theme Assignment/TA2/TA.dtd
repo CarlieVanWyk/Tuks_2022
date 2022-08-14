@@ -1,0 +1,9 @@
+<!-- DTD created at Wed Mar 23 12:57:10 CAT 2022 with EditiX XML Editor (http://www.editix.com). Please insert an encoding attribute header for converting any DTD  -->
+<!-- Carlie van wyk u21672823 -->
+
+<!ELEMENT  root (#PCDATA)>
+<!ATTLIST root version CDATA #FIXED "1.2"> 
+<!ATTLIST root xmlns CDATA #FIXED "www.imy.com/ta-2-schema"> 
+
+
+

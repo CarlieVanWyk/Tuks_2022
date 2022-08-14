@@ -1,0 +1,6 @@
+<!-- DTD created at Sun May 15 15:44:23 CAT 2022 with EditiX XML Editor (http://www.editix.com). Please insert an encoding attribute header for converting any DTD  -->
+<!-- Carlie van wyk -->
+
+<!ELEMENT root (#PCDATA)>
+<!ATTLIST root xmlns CDATA #REQUIRED>
+

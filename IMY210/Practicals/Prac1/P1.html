@@ -1,0 +1,46 @@
+<head>
+  <!--Carlie van wyk u21672823 -->
+  <style>
+    .red {
+      border: 2px solid red;
+      border-radius: 7px;
+      outline: none;
+      border-color: red;
+      box-shadow: 0 0 10px red;
+    }
+
+    .green {
+      border: 2px solid green;
+      border-radius: 7px;
+      outline: none;
+      border-color: green;
+      box-shadow: 0 0 10px green;
+    }
+
+    ol {
+      list-style-type: lower-roman;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root">
+    <h1>{{ heading }}</h1>
+    <input
+      v-model="insert"
+      placeholder="add list item here"
+      v-bind:class="[insert.length < 4 ? 'red' : 'green']"
+      type="text"
+    />
+    <input v-model="remove" type="text" placeholder="remove list item here" />
+    <ol>
+      <li v-for="todoItem in todoList">{{ todoItem.text }}</li>
+    </ol>
+    <button v-bind:disabled="insert.length < 4" v-on:click="add_item">
+      add
+    </button>
+    <button v-bind:disabled="remove.length < 4" v-on:click="remove_item">
+      s remove
+    </button>
+  </div>
+</body>
