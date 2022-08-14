@@ -1,0 +1,23 @@
+/* variables */
+:root {
+  --pink: pink;
+  --blue: rgb(172, 198, 255);
+}
+
+div[class*="col"] {
+  border: solid var(--blue) 3px;
+  border-radius: 20px;
+}
+
+div[class*="row"] {
+  margin: 5px;
+}
+
+div[class*="col"]:nth-child(even) {
+  border: solid var(--pink) 3px;
+  border-radius: 20px;
+}
+
+/* div[class*="col"] {
+  border: solid pink 2px;
+} */
