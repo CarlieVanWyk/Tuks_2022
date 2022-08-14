@@ -1,0 +1,28 @@
+div[class*="card-header"] {
+  font-family: Oxygen;
+}
+
+.card-body {
+  font-family: Quicksand;
+}
+
+i {
+  margin-left: 5px;
+  transition: all 0.5s;
+}
+
+@media screen and (min-width: 992px) {
+  button:hover i {
+    margin-left: 20px;
+    animation: rotation 0.5s forwards;
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(90deg);
+  }
+}
