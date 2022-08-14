@@ -1,5 +1,5 @@
-#include <iostream>
 #include "AdventureIsland.h"
+#include <iostream>
 
 AdventureIsland::AdventureIsland(int num){
     this->numSquadMembers = num;
@@ -90,7 +90,7 @@ void AdventureIsland::initializeGame() {
 void AdventureIsland::level2() {
     cout <<" LEVEL 2 " << endl;
 
-    //create squadmember:
+    //create (restore) squadmember:
     int size = this->numSquadMembers;
     SquadMember * SM[size];
     string players[size];
