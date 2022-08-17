@@ -1,0 +1,8 @@
+@font-face {
+  font-family: Baloo;
+  src: url(../Project/fonts/Baloo_2/static/Baloo2-Bold.ttf) format("truetype");
+}
+
+h1 {
+  font-family: Baloo;
+}
