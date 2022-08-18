@@ -18,9 +18,109 @@
   <body>
     <div class="container">
       <div class="row">
-        <h1 class="text-center">See You Soon</h1>
+        <h1 class="text-center">
+          See You S<img
+            id="logo"
+            src="images/logo2.png"
+            alt="logo img"
+          />n
+        </h1>
       </div>
+
+      <div class="row mt-5">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab" aria-controls="home" aria-selected="true">Login</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+            <div class="row mb-5">
+              <!-- _________________________________________________________________________________login -->
+
+                <div class="col p-0">
+                  <div class="card rounded-0">
+                    <form action="log-in.php" method="post">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col form-group">
+                            <label for="email">Email address:</label>
+                            <input
+                              type="email"
+                              class="form-control"
+                              name="email"
+                              id="email"
+                              placeholder="john.doe@gmail.com"
+                            />
+                          </div>
+                          <div class="col form-group">
+                            <label for="pass">Password:</label>
+                            <input
+                              type="password"
+                              class="form-control"
+                              name="pass"
+                              id="pass"
+                              placeholder="********"
+                            />
+                          </div>
+                        </div>
+                        <button class="btn mt-3">
+                          Log in <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              <div class="col" id="loginImagePart"></div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+        </div>
+      </div>
+
+      <div class="row text-center mt-5 p-3" id="about_us">
+        <div class="col" id="par1">
+          <h2>What do we do?</h2>
+          <p>
+            See You Soon is the home of all your favourite events! Here you can
+            create events, make them available to friends and family, and see
+            what events other people are attending. You can also see what events
+            you are attending. See You Soon helps you organize your events and
+            share them with others. You are free to create any type of event, be
+            it weddings, music festivals, or food markets.
+          </p>
+        </div>
+        <div class="col offset-1" id="par2">
+          <h2>What we can offer you:</h2>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Creating events</li>
+            <li class="list-group-item">Sharing events</ class="list-group-item">
+            <li class="list-group-item">Attending events</li>
+            <li class="list-group-item">Deleting events</li>
+            <li class="list-group-item">Viewing events</li>
+          </ul>
+        </div>
+      </div>
+
     </div>
-    <script src="" async defer></script>
+
+    <!-- Bootstrap Jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <!-- PopperJS -->
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"
+    integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    ></script>
+    <!-- JavaScript Bundle with Popper -->
+     <script
+     src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+     crossorigin="anonymous"
+   ></script>
   </body>
 </html>

@@ -1,8 +1,93 @@
 @font-face {
   font-family: Baloo;
-  src: url(../Project/fonts/Baloo_2/static/Baloo2-Bold.ttf) format("truetype");
+  src: url(../Project/fonts/Baloo_2/static/Baloo2-Regular.ttf)
+    format("truetype");
+}
+
+@font-face {
+  font-family: Dosis;
+  src: url(../Project/fonts/Dosis/static/Dosis-Regular.ttf) format("truetype");
+}
+
+:root {
+  --largeCol: #d2cdfe;
+  /* --largeCol: #f7cdd4; */
+  --mediumCol: #0e096c;
+  --smallCol: #ff0044;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--largeCol) !important;
 }
 
 h1 {
   font-family: Baloo;
+  color: black;
+  font-size: 700% !important;
+}
+
+#logo {
+  width: 10%;
+}
+
+#about_us {
+  font-family: Dosis;
+  background-color: white;
+  border-radius: 10px;
+}
+
+#about_us p {
+  font-size: larger;
+}
+
+#about_us li {
+  font-size: larger;
+  border-color: var(--smallCol);
+  background-color: rgba(255, 255, 255, 0);
+}
+
+#par1 {
+  animation-name: par1Animation;
+  animation-duration: 3s;
+}
+
+@keyframes par1Animation {
+  from {
+    opacity: 0;
+    transform: translate(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+
+#par2 {
+  animation-name: par2Animation;
+  animation-duration: 3s;
+}
+
+@keyframes par2Animation {
+  from {
+    opacity: 0;
+    transform: translate(200%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+
+#loginImagePart {
+  background-color: var(--mediumCol);
+}
+
+button[class*="btn"] {
+  background-color: var(--smallCol);
+  border-color: var(--smallCol);
+  color: white;
+  font-size: larger;
+  font-family: Dosis;
+  border-radius: 10px;
 }
