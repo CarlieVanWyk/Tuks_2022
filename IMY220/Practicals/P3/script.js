@@ -1,4 +1,4 @@
-// Carlie van wyk
+// _________________________________________________________________________________________________Section 1
 function FactorialChecker() {}
 
 FactorialChecker.prototype.printFactorial = function (num) {
@@ -14,7 +14,7 @@ FactorialChecker.prototype.printFactorial = function (num) {
 
 FactorialChecker.prototype.fillArray = function (fact) {
   //check if factorial number
-  var anw = isFactorial(fact);
+  var anw = check(fact);
   if (anw == 0) {
     return "This is not a factorial";
   } else {
@@ -25,16 +25,16 @@ FactorialChecker.prototype.fillArray = function (fact) {
     return arr;
   }
 
-  function isFactorial(n) {
+  function check(originalVal) {
     for (var i = 1; ; i++) {
-      if (n % i == 0) {
-        n = parseInt(n / i);
+      if (originalVal % i == 0) {
+        originalVal = parseInt(originalVal / i);
       } else {
         break;
       }
     }
 
-    if (n == 1) {
+    if (originalVal == 1) {
       return i - 1;
     } else {
       return false;
@@ -44,7 +44,7 @@ FactorialChecker.prototype.fillArray = function (fact) {
 
 var test = new FactorialChecker();
 
-//________________________________________________________________________________Generate Factorial
+//_______________________________________________________________Generate Factorial
 document
   .getElementById("GenerateFactorial")
   .addEventListener("click", startFunction);
@@ -55,7 +55,7 @@ function startFunction() {
   document.getElementById("FactorialResult").innerHTML = result;
 }
 
-//______________________________________________________________________________Factorial List
+//________________________________________________________________Factorial List
 document
   .getElementById("GenerateFactorialList")
   .addEventListener("click", startList);
@@ -64,4 +64,31 @@ function startList() {
   var val = document.getElementById("FactorialInput").value;
   var result = test.fillArray(val);
   document.getElementById("FactorialListResult").innerHTML = result;
+}
+
+// _________________________________________________________________________________________________Section 2
+function PigLatinEncrypt(str) {
+  const vowelRegex = /^[aeiou]/gim;
+  const consonantRegex = /^[^aeiou]/gim;
+  const noVowelRegex = /\b[^aeiou]+\b/gim;
+
+  if (vowelRegex.test(str[0])) {
+    document.getElementById("PigLatinResult").innerHTML = str + "way";
+  }
+  if (consonantRegex.test(str[0])) {
+    document.getElementById("PigLatinResult").innerHTML =
+      str.substring(1) + str.slice(0, 1) + "ay";
+  }
+  if (noVowelRegex.test(str)) {
+    document.getElementById("PigLatinResult").innerHTML = str + "ay";
+  }
+}
+
+document
+  .getElementById("PigLatinEncrypt")
+  .addEventListener("click", startPigLatin);
+
+function startPigLatin() {
+  var val = document.getElementById("SentenceToConvert").value;
+  PigLatinEncrypt(val);
 }
