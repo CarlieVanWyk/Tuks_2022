@@ -1,5 +1,5 @@
 // year/month/day
-var events = [
+export var events = [
   {
     name: "University expo",
     description: "Expo to showcase University degrees",
@@ -38,4 +38,4 @@ var events = [
   },
 ];
 
-const events = new EventHandler(events);
+// const eventsObj = new EventHandler(events);
