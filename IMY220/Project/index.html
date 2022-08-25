@@ -14,70 +14,206 @@
       integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
       crossorigin="anonymous"
     />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon/site.webmanifest" />
   </head>
-  <body>
-    <div class="container">
-      <div class="row">
-        <h1 class="text-center">
-          See You S<img
-            id="logo"
-            src="images/logo2.png"
-            alt="logo img"
-          />n
-        </h1>
-      </div>
 
+  <body>
+    <div id="bckgroundImgDiv">
+      <img
+        id="test"
+        src="images/backgroundIMG4.png"
+        alt="background image"
+        width="100%"
+      />
+    </div>
+
+    <div class="container pb-5">
       <div class="row mt-5">
         <ul class="nav nav-tabs" id="myTab" role="tablist">
           <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab" aria-controls="home" aria-selected="true">Login</button>
+            <button
+              class="nav-link active"
+              id="login-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#login"
+              type="button"
+              role="tab"
+              aria-controls="home"
+              aria-selected="true"
+            >
+              Login
+            </button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+            <button
+              class="nav-link"
+              id="register-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#register"
+              type="button"
+              role="tab"
+              aria-controls="profile"
+              aria-selected="false"
+            >
+              Register
+            </button>
           </li>
         </ul>
         <div class="tab-content" id="myTabContent">
-          <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+          <div
+            class="tab-pane fade show active"
+            id="login"
+            role="tabpanel"
+            aria-labelledby="login-tab"
+          >
             <div class="row mb-5">
               <!-- _________________________________________________________________________________login -->
 
-                <div class="col p-0">
-                  <div class="card rounded-0">
-                    <form action="log-in.php" method="post">
-                      <div class="card-body">
-                        <div class="row">
-                          <div class="col form-group">
-                            <label for="email">Email address:</label>
-                            <input
-                              type="email"
-                              class="form-control"
-                              name="email"
-                              id="email"
-                              placeholder="john.doe@gmail.com"
-                            />
-                          </div>
-                          <div class="col form-group">
-                            <label for="pass">Password:</label>
-                            <input
-                              type="password"
-                              class="form-control"
-                              name="pass"
-                              id="pass"
-                              placeholder="********"
-                            />
-                          </div>
+              <div class="col p-0" id="loginCol">
+                <div class="card">
+                  <form action="php/login.php" method="post">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-6 offset-3 form-group mb-5 mt-5">
+                          <label for="email">Email address:</label>
+                          <input
+                            type="email"
+                            class="form-control"
+                            name="email"
+                            id="email"
+                            placeholder="john.doe@gmail.com"
+                          />
                         </div>
-                        <button class="btn mt-3">
-                          Log in <i class="fa-solid fa-arrow-right"></i>
-                        </button>
+                        <div class="col-6 offset-3 form-group mb-5">
+                          <label for="pass">Password:</label>
+                          <input
+                            type="password"
+                            class="form-control"
+                            name="pass"
+                            id="pass"
+                            placeholder="********"
+                          />
+                        </div>
                       </div>
-                    </form>
-                  </div>
+
+                      <button class="btn btn-light">
+                        Log in <i class="fa-solid fa-arrow-right"></i>
+                      </button>
+                    </div>
+                  </form>
                 </div>
-              <div class="col" id="loginImagePart"></div>
+              </div>
             </div>
           </div>
-          <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+          <div
+            class="tab-pane fade"
+            id="register"
+            role="tabpanel"
+            aria-labelledby="register-tab"
+          >
+            <div class="row mb-5">
+              <!-- _________________________________________________________________________________register -->
+
+              <div class="col p-0" id="registerCol">
+                <div class="card">
+                  <form action="php/register.php" method="post">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-lg-6 col-12 mb-5 form-group">
+                          <label for="fname">First name:</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            name="fname"
+                            id="fname"
+                            placeholder="John"
+                          />
+                        </div>
+                        <div class="col-lg-6 col-12 mb-5 form-group">
+                          <label for="lname">Last name:</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            name="lname"
+                            id="lname"
+                            placeholder="Doe"
+                          />
+                        </div>
+                        <div class="col-lg-6 col-12 mb-5 form-group">
+                          <label for="email1">Email address:</label>
+                          <input
+                            type="email"
+                            class="form-control"
+                            name="email1"
+                            id="email1"
+                            placeholder="john.doe@gmail.com"
+                          />
+                        </div>
+                        <div class="col-lg-6 col-12 mb-5 form-group">
+                          <label for="date">Date of birth:</label>
+                          <input
+                            type="date"
+                            class="form-control"
+                            name="date"
+                            id="date"
+                          />
+                        </div>
+                        <div class="col-lg-6 col-12 mb-5 form-group">
+                          <label for="pass1">Create password:</label>
+                          <input
+                            type="password"
+                            class="form-control"
+                            name="pass1"
+                            id="pass1"
+                            placeholder="********"
+                          />
+                        </div>
+                        <div class="col-lg-6 col-12 mb-5 form-group">
+                          <label for="pass1">Confirm password:</label>
+                          <input
+                            type="password"
+                            class="form-control"
+                            name="pass2"
+                            id="pass2"
+                            placeholder="********"
+                          />
+                        </div>
+                      </div>
+                      <button class="btn btn-light mt-3">
+                        Register <i class="fa-solid fa-arrow-right"></i>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -97,30 +233,33 @@
           <h2>What we can offer you:</h2>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">Creating events</li>
-            <li class="list-group-item">Sharing events</ class="list-group-item">
+            <li class="list-group-item">Sharing events</li>
             <li class="list-group-item">Attending events</li>
             <li class="list-group-item">Deleting events</li>
             <li class="list-group-item">Viewing events</li>
           </ul>
         </div>
       </div>
-
     </div>
 
     <!-- Bootstrap Jquery -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-      <!-- PopperJS -->
     <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"
-    integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <!-- PopperJS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"
+      integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     ></script>
     <!-- JavaScript Bundle with Popper -->
-     <script
-     src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-     integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-     crossorigin="anonymous"
-   ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

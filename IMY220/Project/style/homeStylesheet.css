@@ -1,0 +1,203 @@
+@font-face {
+  font-family: Baloo;
+  /* src: url(../../Project/fonts/Baloo_2/static/Baloo2-Regular.ttf) */
+  src: url(../../Project/fonts/Baloo_2/static/Baloo2-Regular.ttf)
+    format("truetype");
+}
+@font-face {
+  font-family: Dosis;
+  src: url(../../Project/fonts/Dosis/static/Dosis-Regular.ttf)
+    format("truetype");
+}
+
+:root {
+  --largeCol: #d2cdfe;
+  /* --largeCol: #f7cdd4; */
+  --mediumCol: #0e096c;
+  --smallCol: #ff0044;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--largeCol) !important;
+  /* background: repeating-linear-gradient(
+    to right,
+    #a398ff,
+    #a398ff 50px,
+    #d2cdfe 50px,
+    #d2cdfe 100px
+  ); */
+}
+
+/* __________________________________________________________________________________header / navbar */
+#header {
+  background-color: var(--mediumCol);
+  color: var(--smallCol);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-bottom: 1%;
+}
+
+#logo {
+  width: 15%;
+  margin: 1%;
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+}
+
+#navbar a {
+  font-family: Dosis;
+  color: var(--smallCol);
+  text-decoration: none;
+  font-size: 150%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+#navbar a:hover {
+  background-color: #d2cdfead;
+  border-radius: 10px;
+}
+
+#profileIcon {
+  background-color: var(--largeCol);
+  border-radius: 50%;
+  width: 3%;
+  height: 30%;
+  position: absolute;
+  top: 10%;
+  right: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.current {
+  background-color: var(--largeCol);
+  border-radius: 10px;
+}
+
+/* ________________________________________________________________________________________create/search */
+#createBTNid {
+  /* background-color: var(--smallCol); */
+  color: var(--smallCol);
+  border: none;
+}
+
+#createBTNid i:hover {
+  text-shadow: 2px 2px 4px var(--mediumCol);
+}
+
+.searchBar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1%;
+}
+
+#search {
+  background-color: rgba(255, 192, 203, 0);
+  border-radius: 10px;
+  border: black solid 1px;
+  padding: 5px;
+}
+
+#search:focus {
+  outline: black solid 1px;
+}
+
+#searchBTN {
+  border: none;
+  color: var(--smallCol);
+}
+
+#searchBTN i:hover {
+  text-shadow: 2px 2px 4px var(--mediumCol);
+}
+
+/* __________________________________________________________________________________________modal  */
+.modal {
+  font-family: Dosis;
+}
+
+.modal-content {
+  position: relative;
+}
+
+.modal-header button {
+  color: var(--smallCol);
+  border: none;
+  background-color: rgba(255, 192, 203, 0);
+  position: absolute;
+}
+
+.modal-header button:hover {
+  color: var(--smallCol);
+  text-shadow: 2px 2px 4px var(--mediumCol);
+}
+
+.modal-body label {
+  font-size: 150%;
+}
+
+.modal-body input {
+  font-size: 150%;
+}
+
+.modal-body option {
+  font-size: 150%;
+}
+
+.modal-body select {
+  font-size: 150%;
+}
+
+.modal-body button {
+  background-color: var(--smallCol);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 5px;
+  font-size: 150%;
+}
+
+.modal-body button:hover {
+  background-color: var(--smallCol);
+  color: white;
+  box-shadow: 2px 2px 4px var(--mediumCol);
+}
+
+.modal-header {
+  background-color: var(--largeCol);
+}
+
+.form-control:focus {
+  border-color: var(--largeCol) !important;
+  box-shadow: 0 0 0 0.2rem #a398ff !important;
+}
+
+/* __________________________________________________________________________________________events layout (cards) */
+#eventCard .card-header {
+  margin-top: 0;
+  color: black;
+}
+
+#eventCard:hover {
+  box-shadow: 2px 2px 4px var(--mediumCol);
+}
+
+.card {
+  font-family: Dosis;
+}

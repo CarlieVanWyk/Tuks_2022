@@ -3,7 +3,6 @@
   src: url(../Project/fonts/Baloo_2/static/Baloo2-Regular.ttf)
     format("truetype");
 }
-
 @font-face {
   font-family: Dosis;
   src: url(../Project/fonts/Dosis/static/Dosis-Regular.ttf) format("truetype");
@@ -18,7 +17,14 @@
 
 body {
   height: 100vh;
-  background-color: var(--largeCol) !important;
+  /* background-color: var(--largeCol) !important; */
+  background: repeating-linear-gradient(
+    to right,
+    #a398ff,
+    #a398ff 50px,
+    #d2cdfe 50px,
+    #d2cdfe 100px
+  );
 }
 
 h1 {
@@ -31,10 +37,17 @@ h1 {
   width: 10%;
 }
 
+/* #heading {
+  background-image: url("images/backgroundIMG2.png");
+} */
+
+/* _____________________________________________________________________about us */
+
 #about_us {
   font-family: Dosis;
-  background-color: white;
+  background-color: var(--mediumCol);
   border-radius: 10px;
+  color: white;
 }
 
 #about_us p {
@@ -45,6 +58,7 @@ h1 {
   font-size: larger;
   border-color: var(--smallCol);
   background-color: rgba(255, 255, 255, 0);
+  color: white;
 }
 
 #par1 {
@@ -79,10 +93,7 @@ h1 {
   }
 }
 
-#loginImagePart {
-  background-color: var(--mediumCol);
-}
-
+/* _____________________________________________________________________________ login / register */
 button[class*="btn"] {
   background-color: var(--smallCol);
   border-color: var(--smallCol);
@@ -90,4 +101,64 @@ button[class*="btn"] {
   font-size: larger;
   font-family: Dosis;
   border-radius: 10px;
+}
+
+button:hover {
+  background-color: var(--smallCol);
+}
+
+@media screen and (min-width: 992px) {
+  button:hover i {
+    margin-left: 20px;
+    animation: rotation 0.5s forwards;
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(90deg);
+  }
+}
+
+#loginCol .card {
+  /* background-image: url(images/loginIMG2.png);
+  background-size: 100%; */
+  background-color: var(--mediumCol);
+}
+
+#registerCol .card {
+  /* background-image: url(images/loginIMG2.png);
+  background-repeat: no-repeat;
+  background-size: 100%; */
+  background-color: var(--mediumCol);
+}
+
+.form-group label {
+  color: white;
+}
+
+#myTab {
+  font-family: Dosis;
+  font-size: larger;
+}
+
+#registerCol {
+  font-family: Dosis;
+}
+
+#loginCol {
+  font-family: Dosis;
+}
+
+#myTab .nav-item .nav-link {
+  color: black;
+}
+
+#myTab .nav-item .active {
+  background-color: var(--smallCol);
+  color: white;
+  border: none;
 }
