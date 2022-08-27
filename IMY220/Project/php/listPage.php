@@ -54,45 +54,32 @@
                     <a href='" . $currentPage ."'><i class='fa-solid fa-arrow-left-long fa-3x'></i></a>
                 </div>";
                 echo "<h1>" . $row['name'] . "</h1>";
-                echo "<h4>" . $row['date'] . "</h4>";
+                echo "<h4>" . $row['description'] . "</h4>";
             ?>
         </div>
         <br/>
         <div class="container">
-            <div class="row">
-                <div class="col">
-                    <div id="eventImg" class="text-center">
-                        <?php 
-                            echo "<img class='rounded' width='40%' src='../gallery/" . $row['image_name'] . "' alt=''>";
-                        ?>
-                    </div>
-                </div>
+            <div class='card-columns'>
+            <?php
+                // $eventID = $_SESSION["localEvent_id"];
+                $query = "SELECT * FROM listEvents WHERE list_id = '$listID'";
+                $res = mysqli_query($mysqli, $query);
+                while($row = mysqli_fetch_array($res)){
+                    $eventID = $row["event_id"];
+                    echo $eventID;
+                    $query2 = "SELECT * FROM localevents WHERE localEvent_id = '$eventID'";
+                    $res2 = mysqli_query($mysqli, $query2);
+                    $row2 = mysqli_fetch_array($res2);
+                    echo "
+                        <div class='card' id='listCard'>
+                                <h3 class='card-header'>" . $row2['name'] . " - " . "<small>" . $row2['date'] . "</small></h3>
+                                <img class='card-img-top' src='../gallery/" . $row2['image_name'] . "' alt='Card image cap'>
+                        </div>";
+                }
+
+            ?>
             </div>
-            <br/>
-            <div class="row">
-                <div class="col">
-                    <div class="text-center" id="eventDetails">
-                        <div id="eventDesc">
-                            <i class='fa-solid fa-note-sticky fa-2x'></i>
-                            <?php 
-                                echo "<p>" . $row['description'] . "</p>";
-                            ?>
-                        </div>
-                        <div id="eventLocation">
-                            <i class='fa-solid fa-map-marker-alt fa-2x'></i>
-                            <?php 
-                                echo "<p>" . $row['location'] . "</p>";
-                            ?>
-                        </div>
-                        <div id="eventHash">
-                            <i class='fa-solid fa-hashtag fa-2x'></i>
-                            <?php 
-                                echo "<p>" . $row['hashtags'] . "</p>";
-                            ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        </div>
         
         <!-- Bootstrap Jquery -->
         <script

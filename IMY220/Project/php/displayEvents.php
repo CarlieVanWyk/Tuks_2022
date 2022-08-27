@@ -14,7 +14,6 @@
     $userID = isset($userID["id"]) ? $userID["id"] : null;  
 
 
-    // bit unsure how to display this in home.php after event is created
 	$query = "SELECT * FROM localevents WHERE user_id = '$userID' ORDER BY date DESC";
 	$res = $mysqli->query($query);
 	// $row = mysqli_fetch_array($res);
@@ -22,18 +21,19 @@
 	
 	while($row = mysqli_fetch_array($res))
 	{
-		echo 	"
-                        <div class='card' id='eventCard'>
-                            <h3 class='card-header'>" . $row['name'] . " - " . "<small>" . $row['date'] . "</small></h3>
-                <a href='selectedEvent.php?eventID=" . $row["localEvent_id"] . "'>
-                            <img class='card-img-top' src='../gallery/" . $row['image_name'] . "' alt='Card image cap'>
+		echo 	"<div class='card' id='eventCard'>
+                    <h3 class='card-header'>" . $row['name'] . " - " . "<small>" . $row['date'] . "</small></h3>
+                <a href='selectedEvent.php?eventID=" . $row["localEvent_id"] . "&currentPage=home.php'>
+                    <img class='card-img-top' src='../gallery/" . $row['image_name'] . "' alt='Card image cap'>
                 </a>
-                            <div class='card-body'>";
-        echo                    require "deleteBtn.php";  
-        echo                    require "editBtn.php";
-        echo                    require "addToListBtn.php";
-        echo				"</div>
-                        </div>
+                <div class='card-body'>";
+        echo         require "deleteBtn.php"; 
+        echo         require "editBtn.php";
+        echo         require "addToListBtn.php";
+        echo         require "friendsAttendingBtn.php";
+        echo         require "attendBtn.php";
+        echo    "</div>
+                </div>
                 ";
 	}
 ?>

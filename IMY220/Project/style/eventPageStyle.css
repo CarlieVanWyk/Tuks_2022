@@ -55,3 +55,19 @@ body {
   font-family: Dosis;
   font-size: 150%;
 }
+
+/* _______________________________________________________________________________list */
+#listCard {
+  border-radius: 10px;
+  padding-left: 0;
+  padding-right: 0;
+}
+#listCard .card-header {
+  margin-top: 0;
+  color: black;
+  border-radius: 10px;
+}
+
+#listCard:hover {
+  box-shadow: 2px 2px 4px var(--mediumCol);
+}

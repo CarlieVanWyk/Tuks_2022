@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title></title>
+    <title>Local</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../style/homeStylesheet.css" />
@@ -49,19 +49,7 @@
   </head>
   <body>
     <!-- _________________________________________________________________________header/navbar -->
-    <div id="header">
-      <img src="../images/logo4.png" alt="logo" id="logo" />
-      <div id="navbar">
-        <a class="current" href="home.php">Local</a>
-        <a href="global.php">Global</a>
-        <a href="lists.php">Lists</a>
-      </div>
-      <div id="profileIcon">
-        <i class="fa-solid fa-user"></i>
-      </div>
-    </div>
-    <div class="container">
-      <?php
+    <?php
         session_start();
         error_reporting(E_ALL);
         ini_set('error_reporting', E_ALL);
@@ -70,7 +58,30 @@
       
         $email = $_SESSION["email"];
         $password = $_SESSION["pass"];
-      ?>            
+    ?>
+    <div id="header">
+      <img src="../images/logo4.png" alt="logo" id="logo" />
+      <div id="navbar">
+        <a class="current" href="home.php">Local</a>
+        <a href="global.php">Global</a>
+        <a href="lists.php">Lists</a>
+      </div>
+      <?php 
+        $query = "SELECT * FROM users WHERE email = '$email' AND password = '$password'";
+        $res = $mysqli->query($query);
+        $row = $res->fetch_assoc();
+        $name = $row["name"];
+
+        echo "<div id='profile'>
+                <p>" . $name . "</p>
+                <br/>
+                <div id='profileIcon'> 
+                  <i class='fa-solid fa-user'></i>
+                </div>
+              </div>";
+      ?>
+    </div>
+    <div class="container">            
       <div class="row">
         <!-- _______________________________________________________________________________ create events modal-->
         <div class="col-1">

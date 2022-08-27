@@ -1,3 +1,5 @@
+<!-- add deleteBtn here -->
+
 <?php
     echo "
     <button id='editBTNid' type='button' class='btn' data-toggle='modal' 
@@ -9,10 +11,10 @@
         <div class='modal-dialog modal-dialog-centered' role='document'>
             <div class='modal-content'>
             <div class='modal-header'>
-            <button class=' data-dismiss='modal'>
+            <button class='' data-dismiss='modal'>
                 <i class='fa-solid fa-xmark fa-2x'></i>
             </button>
-            <h2 class='modal-title' id='exampleModalLabel'>Create Local Event</h2>
+            <h2 class='modal-title' id='exampleModalLabel'>Edit Local Event</h2>
             </div>
             <div class='modal-body'>
                 <form action='' method='post' enctype='multipart/form-data'>
@@ -41,23 +43,8 @@
                         <input type='text' class='form-control' name='eventHash' required>
                     </div>";
 
-                    
-                    // $query = "SELECT * FROM users WHERE email = '$email' AND password = '$password'";
-                    // $res = $mysqli->query($query);
-                    // if($row = mysqli_fetch_array($res))
-                    // {
-                    //     echo 	"<input type='hidden' id='email' name='email' value='" . $row['email'] . "'/>
-                    //             <input type='hidden' id='pass' name='pass' value='" . $row['password'] . "'/>";				
-                    // }
-                    // else
-                    // {
-                    //     echo 	"<div class='alert alert-danger mt-3' role='alert'>
-                    //             You are not registered on this site!
-                    //         </div>";
-                    // }
-
     echo            "<button class='btn'>
-                        create
+                        Edit
                     </button>
                 </form>
             </div>

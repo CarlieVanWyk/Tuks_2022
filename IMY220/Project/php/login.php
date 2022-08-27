@@ -15,11 +15,14 @@
     $query = "SELECT * FROM users WHERE email = '$email' AND password = '$pass'";
 
     $res = mysqli_query($mysqli, $query);
+    $resp = mysqli_fetch_assoc($res);
 
     if(mysqli_num_rows($res) > 0)
     {
         $_SESSION["email"] = $email;
         $_SESSION["pass"] = $pass;
+        $_SESSION["name"] = $resp["name"];
+        $_SESSION["id"] = $resp["id"];
         header('Location: home.php');
     }
     else

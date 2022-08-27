@@ -1,5 +1,5 @@
 <?php
-    $eventId = $_GET["eventID"];
+    $listID = $_GET["listID"];
     $currentPage = $_GET["currentPage"];
 
     // Create connection
@@ -8,9 +8,9 @@
 	    die("Connection failed: " . $mysqli->connect_error);
 	}
 
-	$sql = "SELECT * FROM localevents WHERE localEvent_id = $eventId";
+	$sql = "SELECT * FROM lists WHERE list_id = $listID";
 	$res = mysqli_query($mysqli, $sql);
 	$row = mysqli_fetch_array($res);
 
-    require "eventPage.php";
+    require "listPage.php";
 ?>

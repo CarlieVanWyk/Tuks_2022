@@ -69,14 +69,25 @@ body {
   border-radius: 10px;
 }
 
-#profileIcon {
-  background-color: var(--largeCol);
-  border-radius: 50%;
-  width: 3%;
-  height: 30%;
+#profile {
   position: absolute;
   top: 10%;
   right: 2%;
+  width: 5%;
+  height: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#profileIcon {
+  background-color: var(--largeCol);
+  border-radius: 50%;
+  width: 50%;
+  height: 100%;
+  /* position: absolute; */
+  /* top: 10%;
+  right: 2%; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -189,6 +200,10 @@ body {
 }
 
 /* __________________________________________________________________________________________events layout (cards) */
+#eventCard {
+  border-radius: 10px;
+}
+
 #eventCard .card-header {
   margin-top: 0;
   color: black;
@@ -200,4 +215,43 @@ body {
 
 .card {
   font-family: Dosis;
+}
+
+/* ______________________________________________________________________________________attend button */
+#attendBtnId {
+  background-color: var(--smallCol);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 5px;
+  font-size: 150%;
+}
+
+#attendBtnId:hover {
+  background-color: var(--smallCol);
+  color: white;
+  box-shadow: 2px 2px 4px var(--mediumCol);
+}
+
+/* __________________________________________________________________________________lists */
+#listCard {
+  border-radius: 10px;
+  padding-left: 0;
+  padding-right: 0;
+}
+#listCard .card-header {
+  margin-top: 0;
+  color: black;
+  background-color: #7f71ff;
+  border-radius: 10px;
+}
+
+#listCard .card-body {
+  color: black;
+  font-size: larger;
+}
+
+#listCard:hover {
+  box-shadow: 2px 2px 4px var(--mediumCol);
 }
