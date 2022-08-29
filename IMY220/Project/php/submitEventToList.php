@@ -3,7 +3,7 @@
     ini_set('error_reporting', E_ALL);
 
     $listID = $_POST["listID"];
-    $eventID = $_SESSION["localEvent_id"];
+    $eventID = $_POST["localEvent_id"];
 
     $mysqli = mysqli_connect("localhost", "root", "", "IMY220project");
 

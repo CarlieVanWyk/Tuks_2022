@@ -108,7 +108,7 @@
                     </div>
                     <div class="form-group">
                       <label for="listDesc" class="col-form-label">Description:</label>
-                      <input type='text' class='form-control' name='listDesc' id='listDesc' required/>
+                      <input type='text' class='form-control' name='listDesc' required/>
                     </div>
                     <?php 
                       $query = "SELECT * FROM users WHERE email = '$email' AND password = '$password'";

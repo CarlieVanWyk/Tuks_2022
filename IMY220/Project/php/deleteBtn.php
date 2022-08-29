@@ -6,10 +6,10 @@
 
     echo "
     <button id='deleteBTNid' type='button' class='btn' data-toggle='modal' 
-            data-target='#deleteBTN' data-whatever='@mdo'>
+        data-target='#deleteBtn" . $eventId . "' data-whatever='@mdo'>
         <i class='fa-solid fa-trash-can'></i>
     </button>
-    <div class='modal fade' id='deleteBTN' tabindex='-1' role='dialog' 
+    <div class='modal fade' id='deleteBtn" . $eventId . "' tabindex='-1' role='dialog' 
         aria-labelledby='exampleModalLabel' aria-hidden='true'>
         <div class='modal-dialog modal-dialog-centered' role='document'>
             <div class='modal-content'>
@@ -21,7 +21,7 @@
                         <button id='deleteBtnId' type='submit' class='btn'>Delete</button>
                         <button type='button' class='btn' data-dismiss='modal' >Cancel</button>
                     </div>
-                    <input type='hidden' id='eventId' name='eventId' value='" . $row["localEvent_id"] . "'/>
+                    <input type='hidden' id='eventId' name='eventId' value='" . $eventId . "'/>
                     
                 </form>
             </div>

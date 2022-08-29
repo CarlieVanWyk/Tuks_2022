@@ -5,7 +5,10 @@
 	error_reporting(E_ALL);
 	ini_set('error_reporting', E_ALL);
 
-	$mysqli = mysqli_connect("localhost", "root", "", "imy220project"); 
+	$mysqli = mysqli_connect("localhost", "root", "", "imy220project");
+        if ($mysqli->connect_error) {
+            die("Connection failed: " . $mysqli->connect_error);
+        } 
 
     $email = $_SESSION["email"];
     $pass = $_SESSION["pass"];

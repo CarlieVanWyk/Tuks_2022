@@ -5,7 +5,18 @@
 
     //get hidden fields
     $eventID = $_POST["eventId"];
-    echo "eventId: $eventID";
+
+    $mysqli = mysqli_connect("localhost", "root", "", "IMY220project");
+
+    $query = "DELETE FROM localevents WHERE localEvent_id = '$eventID'";
+    $res = mysqli_query($mysqli, $query);
+    if($res){
+        header('Location: home.php');
+        echo "Event deleted";
+    }else{
+        echo "Error deleting event";
+    }
+
 
 
 

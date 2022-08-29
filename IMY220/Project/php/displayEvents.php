@@ -21,17 +21,20 @@
 	
 	while($row = mysqli_fetch_array($res))
 	{
+        $testEvent_id = $row['localEvent_id'];
 		echo 	"<div class='card' id='eventCard'>
                     <h3 class='card-header'>" . $row['name'] . " - " . "<small>" . $row['date'] . "</small></h3>
                 <a href='selectedEvent.php?eventID=" . $row["localEvent_id"] . "&currentPage=home.php'>
                     <img class='card-img-top' src='../gallery/" . $row['image_name'] . "' alt='Card image cap'>
                 </a>
                 <div class='card-body'>";
-        echo         require "deleteBtn.php"; 
-        echo         require "editBtn.php";
-        echo         require "addToListBtn.php";
-        echo         require "friendsAttendingBtn.php";
-        echo         require "attendBtn.php";
+        // echo     $row["localEvent_id"];
+        // echo     $testEvent_id;
+                 require "deleteBtn.php"; 
+                 require "editBtn.php";
+                 require "addToListBtn.php";
+                 require "friendsAttendingBtn.php";
+                 require "attendBtn.php";
         echo    "</div>
                 </div>
                 ";

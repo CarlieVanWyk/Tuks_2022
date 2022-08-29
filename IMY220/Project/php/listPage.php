@@ -66,7 +66,7 @@
                 $res = mysqli_query($mysqli, $query);
                 while($row = mysqli_fetch_array($res)){
                     $eventID = $row["event_id"];
-                    echo $eventID;
+                    // echo $eventID;
                     $query2 = "SELECT * FROM localevents WHERE localEvent_id = '$eventID'";
                     $res2 = mysqli_query($mysqli, $query2);
                     $row2 = mysqli_fetch_array($res2);

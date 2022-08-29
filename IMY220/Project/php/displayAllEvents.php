@@ -10,7 +10,7 @@
     }
 
     //print everything in localEvents table
-    $sql = "SELECT * FROM localevents";
+    $sql = "SELECT * FROM localevents ORDER BY date DESC";
     $res = mysqli_query($mysqli, $sql);
     while($row = mysqli_fetch_array($res))
 	{
@@ -20,8 +20,8 @@
                         <img class='card-img-top' src='../gallery/" . $row['image_name'] . "' alt='Card image cap'>
                     </a>
                     <div class='card-body'>";
-        echo         require "friendsAttendingBtn.php";
-        echo         require "attendBtn.php";
+                 require "friendsAttendingBtn.php";
+                 require "attendBtn.php";
         echo    "   </div>
                 </div>
                 ";
