@@ -29,6 +29,10 @@ body {
   ); */
 }
 
+a {
+  text-decoration: none !important;
+}
+
 /* __________________________________________________________________________________header / navbar */
 #header {
   background-color: var(--mediumCol);
@@ -69,28 +73,14 @@ body {
   border-radius: 10px;
 }
 
-#profile {
+#profileIcon {
   position: absolute;
   top: 10%;
   right: 2%;
-  width: 5%;
-  height: 20%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-#profileIcon {
-  background-color: var(--largeCol);
-  border-radius: 50%;
-  width: 50%;
-  height: 100%;
-  /* position: absolute; */
-  /* top: 10%;
-  right: 2%; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  color: var(--smallCol);
 }
 
 .current {
@@ -230,6 +220,25 @@ body {
 
 #attendBtnId:hover {
   background-color: var(--smallCol);
+  color: white;
+  box-shadow: 2px 2px 4px var(--mediumCol);
+}
+
+/* ______________________________________________________________________________________delete button */
+#deleteBtnId,
+#whichUserId {
+  background-color: var(--largeCol);
+  color: black;
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 5px;
+  /* font-size: 10%; */
+}
+
+#deleteBtnId:hover,
+#whichUserId:hover {
+  background-color: var(--largeCol);
   color: white;
   box-shadow: 2px 2px 4px var(--mediumCol);
 }

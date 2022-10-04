@@ -14,19 +14,6 @@
 
     $query = "SELECT * FROM lists WHERE user_id = '$userID'";
     $res = mysqli_query($mysqli, $query);
-    
-    // while($row = mysqli_fetch_array($res)){
-    //     echo "
-    //         <div class='card' id='listCard'>
-    //             <a href='selectedList.php?listID=" . $row["list_id"] . "&currentPage=lists.php'>
-    //                 <h3 class='card-header'>" . $row['name'] . "</h3>
-                
-    //                 <div class='card-body'>
-    //                     <p class='card-text'>" . $row['description'] . "</p>
-    //                 </div>
-    //             </a>
-    //         </div>";
-    // }
 
     while($row = mysqli_fetch_array($res)) {
         echo "
@@ -39,8 +26,9 @@
                             <div class='card-body'>
                                 <p class='card-text'>" . $row['description'] . "</p>
                             </div>
-                        </a>
-                    </div>
+                        </a>";
+                        require "editListBtn.php";
+        echo        "</div>
                 </div>
             </div>
         ";

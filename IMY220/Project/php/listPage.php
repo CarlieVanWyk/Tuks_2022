@@ -7,6 +7,14 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../style/eventPageStyle.css">
+        <!-- google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&display=swap" rel="stylesheet">
+        <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Dosis"
+        />
          <!-- boostrap CSS only -->
         <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
@@ -62,7 +70,7 @@
             <div class='card-columns'>
             <?php
                 // $eventID = $_SESSION["localEvent_id"];
-                $query = "SELECT * FROM listEvents WHERE list_id = '$listID'";
+                $query = "SELECT * FROM listevents WHERE list_id = '$listID'";
                 $res = mysqli_query($mysqli, $query);
                 while($row = mysqli_fetch_array($res)){
                     $eventID = $row["event_id"];

@@ -7,6 +7,14 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../style/homeStylesheet.css" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Dosis"
+    />
     <!-- boostrap CSS only -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
@@ -54,7 +62,8 @@
         error_reporting(E_ALL);
         ini_set('error_reporting', E_ALL);
       
-        $mysqli = mysqli_connect("localhost", "root", "", "imy220project");
+        // $mysqli = mysqli_connect("localhost", "u21672823", "alkewmar", "u21672823");
+        require "master.php";
       
         $email = $_SESSION["email"];
         $password = $_SESSION["pass"];
@@ -72,13 +81,12 @@
         $row = $res->fetch_assoc();
         $name = $row["name"];
 
-        echo "<div id='profile'>
-                <p>" . $name . "</p>
-                <br/>
-                <div id='profileIcon'> 
-                  <i class='fa-solid fa-user'></i>
-                </div>
-              </div>";
+        // <p>" . $name . "</p>
+        echo "<a href='profilePage.php'>
+                  <div id='profileIcon'> 
+                    <i class='fa-solid fa-user fa-2x'></i>
+                  </div>
+              </a>";
       ?>
     </div>
     <div class="container">            

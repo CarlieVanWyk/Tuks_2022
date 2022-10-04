@@ -5,7 +5,8 @@
     $listID = $_POST["listID"];
     $eventID = $_POST["localEvent_id"];
 
-    $mysqli = mysqli_connect("localhost", "root", "", "IMY220project");
+    // $mysqli = mysqli_connect("localhost", "u21672823", "alkewmar", "u21672823");
+    require "master.php";
 
     $query = "INSERT INTO listevents (list_id, event_id) VALUES ('$listID', '$eventID')";   
     $res = mysqli_query($mysqli, $query);

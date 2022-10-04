@@ -1,0 +1,364 @@
+@font-face {
+  font-family: Baloo;
+  src: url(../../Project/fonts/Baloo_2/static/Baloo2-Regular.ttf)
+    format("truetype");
+}
+@font-face {
+  font-family: Dosis;
+  src: url(../../Project/fonts/Dosis/static/Dosis-Regular.ttf)
+    format("truetype");
+}
+
+:root {
+  --largeCol: #d2cdfe;
+  --largeColDark1: #a398ff;
+  --largeColDark2: #8174fb;
+  --mediumCol: #0e096c;
+  --smallCol: #ff0044;
+  --whiteCol: rgba(255, 255, 255, 0.817);
+  --blackCol: rgba(0, 0, 0, 0.817);
+}
+
+body {
+  height: 100vh;
+  background-color: var(--largeCol) !important;
+}
+/* __________________________________________________________________main container */
+#profileMainBox {
+  margin: 3% 10% 10%;
+  padding: 2%;
+  border-radius: 15px;
+  background-color: var(--whiteCol);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 3%;
+
+  box-shadow: 30px 30px 100px 20px #8174fb79;
+}
+
+#backBtn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 1%;
+}
+
+#backBtn i {
+  color: var(--smallCol);
+}
+
+#backBtn i:hover {
+  color: var(--smallCol);
+  text-shadow: 2px 2px 4px black;
+}
+
+/* __________________________________________________________________________user details */
+#userDetails {
+  /* background-color: rgb(0, 57, 255); */
+  background-color: var(--largeColDark1);
+  border-radius: 15px;
+  padding: 3%;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+#userDetails #userImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: Dosis;
+  color: var(--blackCol);
+  font-size: 200%;
+}
+#userDetails #userImage img {
+  width: 80%;
+  height: 80%;
+  /* width: 200px; */
+  border-radius: 50%;
+  border: 7px solid var(--whiteCol);
+}
+
+#userInfo {
+  background-color: var(--largeColDark2);
+  border-radius: 15px;
+  padding: 3%;
+  font-family: Dosis;
+  color: var(--blackCol);
+  font-size: 130%;
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+
+button {
+  font-family: Dosis !important;
+  background-color: var(--smallCol) !important;
+  color: white !important;
+  border: none;
+  border-radius: 10px !important;
+  padding: 5px !important;
+  margin: 5px !important;
+  font-size: 130% !important;
+}
+
+button:hover {
+  background-color: var(--smallCol);
+  color: white;
+  box-shadow: 2px 2px 4px var(--mediumCol);
+}
+
+/* _____________________________ modal  */
+.modal {
+  font-family: Dosis;
+}
+
+.modal-content {
+  position: relative;
+}
+
+.modal-header button {
+  color: var(--smallCol);
+  border: none;
+  background-color: rgba(255, 192, 203, 0);
+  position: absolute;
+}
+
+.modal-header button:hover {
+  color: var(--smallCol);
+  text-shadow: 2px 2px 4px var(--mediumCol);
+}
+
+/* .modal-body {
+  font-size: 150%;
+} */
+
+.modal-body label {
+  font-size: 150%;
+}
+
+.modal-body input {
+  font-size: 150%;
+}
+
+.modal-body option {
+  font-size: 150%;
+}
+
+.modal-body select {
+  font-size: 150%;
+}
+
+.modal-body button {
+  background-color: var(--smallCol);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 5px;
+  font-size: 150%;
+}
+
+.modal-body button:hover {
+  background-color: var(--smallCol);
+  color: white;
+  box-shadow: 2px 2px 4px var(--mediumCol);
+}
+
+.modal-header {
+  background-color: var(--largeCol);
+}
+
+.form-control:focus {
+  border-color: var(--largeCol) !important;
+  box-shadow: 0 0 0 0.2rem #a398ff !important;
+}
+
+.modal-body a {
+  color: black;
+}
+.modal-body a:hover {
+  text-decoration: none;
+  color: black;
+  background-color: var(--largeColDark1);
+}
+
+/* __________________________________________________________________________user numbers */
+#userNumbers {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 4;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* background-color: rgb(0, 57, 255); */
+  background-color: var(--largeCol);
+  border-radius: 15px;
+}
+
+#userNumbers .userNumItem i {
+  transition: all 0.2s ease-in-out;
+}
+
+#userNumbers .userNumItem:hover i {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.userNumItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: var(--blackCol);
+}
+
+.userNumItem p {
+  font-family: Dosis;
+  font-size: 200%;
+}
+
+#editUserCreatedBTNid,
+#editUserFriendsBTNid,
+#editUserAttendedBTNid {
+  background-color: rgba(0, 0, 0, 0) !important;
+  color: rgba(0, 0, 0, 0.817) !important;
+  border: none !important;
+}
+
+#numCreated p,
+#numAttended p,
+#numFriends p {
+  margin: 0;
+}
+
+/* ________________________________________________________________________________user messages / friendOrNot */
+#userChats,
+#friendOrNot {
+  grid-row-start: 2;
+  grid-row-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 3;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* background-color: rgb(0, 57, 255); */
+  background-color: var(--largeCol);
+  border-radius: 15px;
+  color: var(--blackCol);
+  font-family: Dosis;
+
+  /* padding: 20px; */
+}
+
+#userChats ul {
+  /* background-color: var(--largeColDark1); */
+  border-radius: 15px;
+  list-style: none;
+  flex-grow: 1;
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+
+  overflow-y: scroll;
+}
+
+#userChats ul::-webkit-scrollbar {
+  width: 5px;
+}
+
+#userChats ul::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0);
+  border-radius: 10px;
+}
+
+#userChats ul::-webkit-scrollbar-thumb {
+  background-color: var(--smallCol);
+  border-radius: 10px;
+}
+
+#userChats li {
+  font-size: 130%;
+  /* width: 100%; */
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  background-color: var(--largeColDark1);
+  /* background-color: var(--largeCol); */
+  border-radius: 15px;
+  margin: 4% 4%;
+}
+
+#userChats li:hover {
+  background-color: var(--largeColDark2);
+  border-radius: 15px;
+}
+
+#friendOrNot p {
+  font-size: 150%;
+  margin: 0;
+}
+
+#friendOrNot a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* __________________________________________________________________________________--user socials */
+#userSocials {
+  grid-row-start: 2;
+  grid-row-end: 4;
+  grid-column-start: 3;
+  grid-column-end: 4;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  background-color: var(--largeCol);
+  border-radius: 15px;
+  color: var(--blackCol);
+  font-family: Dosis;
+}
+
+#userSocials ul {
+  list-style: none;
+  flex-grow: 1;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+#userSocials li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 130%;
+  transition: all 0.2s ease-in-out;
+}
+
+#userSocials li i {
+  transition: all 0.2s ease-in-out;
+}
+
+#userSocials li:hover i {
+  transform: scale(1.1);
+  /* cursor: pointer; */
+}

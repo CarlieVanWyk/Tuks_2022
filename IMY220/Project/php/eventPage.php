@@ -7,6 +7,14 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../style/eventPageStyle.css">
+        <!-- google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&display=swap" rel="stylesheet">
+        <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Dosis"
+        />
          <!-- boostrap CSS only -->
         <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
@@ -59,18 +67,15 @@
         </div>
         <br/>
         <div class="container">
-            <div class="row">
-                <div class="col">
+            <div class="row" >
+                <div class="col align-self-center">
                     <div id="eventImg" class="text-center">
                         <?php 
-                            echo "<img class='rounded' width='40%' src='../gallery/" . $row['image_name'] . "' alt=''>";
+                            echo "<img class='rounded' width='70%' src='../gallery/" . $row['image_name'] . "' alt=''>";
                         ?>
                     </div>
                 </div>
-            </div>
-            <br/>
-            <div class="row">
-                <div class="col">
+                <div class="col align-self-center">
                     <div class="text-center" id="eventDetails">
                         <div id="eventDesc">
                             <i class='fa-solid fa-note-sticky fa-2x'></i>
@@ -93,7 +98,35 @@
                     </div>
                 </div>
             </div>
-        
+            <br/>
+            <div class="row" >
+                <div class="col align-self-center">
+                    <div id="eventImg" class="text-center">
+                        <?php 
+                            if(isset($row2['image_name'])){
+                                echo "<img class='rounded' width='70%' src='../gallery/" . $row2['image_name'] . "' alt=''>";
+                            }
+                        ?>
+                    </div>
+                </div>
+                <div class="col align-self-center">
+                    <div class="text-center" id="eventDetails">
+                        <div id="eventDesc">
+                            <?php 
+                                if(isset($row2['description'])){
+                                    echo "<i class='fa-solid fa-note-sticky fa-2x'></i>";
+                                    echo "<p>" . $row2['description'] . "</p>";
+                                    echo "<i class='fa-solid fa-star'></i>";
+                                    echo "<p>" . $row2['rating'] . "</p>";
+                                }
+                            ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br/>
+            
+        </div>
         <!-- Bootstrap Jquery -->
         <script
         src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
