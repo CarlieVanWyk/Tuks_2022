@@ -8,15 +8,11 @@
     error_reporting(E_ALL);
     ini_set('error_reporting', E_ALL);
 
-    // echo $email;
-    // echo $pass;
-
     // get id from users where email = email and password = password
     $query = "SELECT * FROM users WHERE email = '$email' AND password = '$pass'";
     $res = mysqli_query($mysqli, $query);
     $userID = mysqli_fetch_array($res);
     $userID = isset($userID["id"]) ? $userID["id"] : null;  
-    // echo $userID;
 
 
 	$query1 = "SELECT * FROM profileuserdetails WHERE user_id = '$userID'";

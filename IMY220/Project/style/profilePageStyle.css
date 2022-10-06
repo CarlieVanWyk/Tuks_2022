@@ -314,6 +314,71 @@ button:hover {
   align-items: center;
 }
 
+.userPfpSmall {
+  width: 50px;
+  border-radius: 50%;
+  border: 3px solid var(--whiteCol);
+}
+
+#messageToSend {
+  width: 85%;
+  height: 100%;
+  border-radius: 15px;
+  padding: 10px;
+  font-size: 130%;
+  font-family: Dosis;
+  resize: none;
+}
+
+.box {
+  width: 300px;
+  margin: 20px auto;
+  background: var(--largeColDark2);
+  padding: 20px;
+  text-align: center;
+  font-weight: 900;
+  color: #fff;
+  position: relative;
+  border-radius: 15px;
+}
+
+.box2 {
+  width: 300px;
+  margin: 20px auto;
+  background: var(--largeColDark1);
+  padding: 20px;
+  text-align: center;
+  font-weight: 900;
+  color: #fff;
+  position: relative;
+  border-radius: 15px;
+}
+
+.userYou:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid var(--largeColDark2);
+  border-right: 10px solid transparent;
+  border-top: 10px solid var(--largeColDark2);
+  border-bottom: 10px solid transparent;
+  right: -15px;
+  top: 6px;
+}
+
+.userOther:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid var(--largeColDark1);
+  border-top: 10px solid var(--largeColDark1);
+  border-bottom: 10px solid transparent;
+  left: -15px;
+  top: 6px;
+}
 /* __________________________________________________________________________________--user socials */
 #userSocials {
   grid-row-start: 2;

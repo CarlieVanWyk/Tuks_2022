@@ -11,9 +11,12 @@
 
 :root {
   --largeCol: #d2cdfe;
-  /* --largeCol: #f7cdd4; */
+  --largeColDark1: #a398ff;
+  --largeColDark2: #8174fb;
   --mediumCol: #0e096c;
   --smallCol: #ff0044;
+  --whiteCol: rgba(255, 255, 255, 0.817);
+  --blackCol: rgba(0, 0, 0, 0.817);
 }
 
 body {
@@ -116,4 +119,87 @@ body {
   font-family: Dosis;
   font-size: 150%;
   padding: 2%;
+}
+
+/* _______________________________________________________________________________ */
+.eventPageContainer {
+  padding: 2%;
+  background-color: var(--whiteCol);
+  border-radius: 15px;
+}
+/* ______________________________________________________________________________ text over image  */
+
+.eventContainer {
+  position: relative;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.eventImage {
+  opacity: 1;
+  display: block;
+  width: 40%;
+  height: auto;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+
+.eventMiddle {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.eventContainer:hover .eventImage {
+  opacity: 0.3;
+}
+
+.eventContainer:hover .eventMiddle {
+  opacity: 1;
+}
+
+.eventText {
+  background-color: var(--largeColDark2);
+  border-radius: 15px;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+/* ________________________________________________________________________________attended  */
+.minifeedImages {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.attendedImage {
+  margin: 1%;
+  width: 20%;
+  border-radius: 5px;
+  transition: 0.5s ease;
+}
+
+.attendedImage:hover {
+  margin: 2%;
+  width: 18%;
+}
+
+.miniFeedDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  font-family: "Baloo 2", cursive !important;
 }

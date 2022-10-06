@@ -72,6 +72,9 @@
         // echo "pass: " . $_SESSION["pass"];
     ?>
     <div id="header">
+      <div class="logout">
+        <p>Log out</p>
+      </div>
       <img src="../images/logo4.png" alt="logo" id="logo" />
       <div id="navbar">
         <a class="current" href="home.php">Local</a>
@@ -200,6 +203,15 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="" async defer></script>
+    <script>
+      $(document).ready(function () {
+        $(".logout").click(function () {
+          let exit = confirm("Are you sure you want to logout?");
+          if (exit == true) {
+            window.location = "../index.html";
+          }
+        });
+      });
+    </script>
   </body>
 </html>

@@ -88,6 +88,15 @@ a {
   border-radius: 10px;
 }
 
+.logout {
+  font-family: Dosis;
+  font-size: 150%;
+  cursor: pointer;
+  position: absolute;
+  top: 10%;
+  left: 2%;
+}
+
 /* ________________________________________________________________________________________create/search */
 #createBTNid {
   /* background-color: var(--smallCol); */

@@ -99,25 +99,9 @@
         </div>
         <!-- ________________________________________________________________________________userChats -->
         <div id="userChats">
-          <h2>Chats</h2>
-          <ul>
-            <li>
-              Carl de Witt
-              <div><button>Chat</button> </div>
-            </li>
-            <li>
-              Layla Smith
-              <div><button>Chat</button> </div>
-            </li>
-            <li>
-              Nadia Swart
-              <div><button>Chat</button> </div>
-            </li>
-            <li>
-              Ronell van Wyk
-              <div><button>Chat</button> </div>
-            </li>
-          </ul>
+          <?php 
+            require 'displayUserChats.php';
+          ?>
         </div>
         <!-- ___________________________________________________________________________________userSocials -->
         <div id="userSocials">
@@ -140,7 +124,7 @@
               <p>Carlie van Wyk</p>
             </li>
           </ul>
-          <button>Edit</button>
+          <button><i class='fa-solid fa-pencil fa-2x'></i></button>
         </div>
       </div>
     </div>
@@ -167,5 +151,19 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#messageToSendBTN").on("click" , function(e){
+          e.preventDefault();
+          let message = $("#messageToSend").val();
+          $("<div></div>", {
+            class: "box userYou",
+            html: message,
+
+          }).appendTo(".chatArea");
+          $("#messageToSend").val("");
+        });
+      });
+    </script>
   </body>
 </html>

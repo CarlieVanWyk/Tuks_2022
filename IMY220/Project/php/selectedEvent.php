@@ -10,9 +10,13 @@
 	$res = mysqli_query($mysqli, $sql);
 	$row = mysqli_fetch_array($res);
 
-	$sql2 = "SELECT * FROM attend WHERE user_id = $userID AND event_id = $eventId";
+	// $sql2 = "SELECT * FROM attend WHERE user_id = $userID AND event_id = $eventId";
+	// $res2 = mysqli_query($mysqli, $sql2);
+	// $row2 = mysqli_fetch_array($res2);
+
+	$sql2 = "SELECT * FROM attend WHERE event_id = $eventId";
 	$res2 = mysqli_query($mysqli, $sql2);
-	$row2 = mysqli_fetch_array($res2);
+	// $row2 = mysqli_fetch_array($res2);
 
     require "eventPage.php";
 ?>

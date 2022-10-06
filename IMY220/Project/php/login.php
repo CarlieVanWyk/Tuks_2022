@@ -27,6 +27,7 @@
     }
     else
     {
+        header('Location: ../index.html');
         echo '<h1>Login unsuccessful!</h1>
         <p> <a href="../index.html">Retry</a></p>';
     }
@@ -35,7 +36,7 @@
     $_SESSION["pass"] = $pass;
 ?>
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
 	<title>IMY 220 - Project Login result page</title>
@@ -45,19 +46,19 @@
 <body>
 	<div class="container">
 		<?php 
-			if($res) {
-                header('Location: home.php');
-                echo "email: " . $_SESSION["email"];
-                echo "pass: " . $pass;
-                echo '<h1>Login successful!</h1>
-                <p>You can now <a href="home.php">go to the home page</a>.</p>';
-            } 
-  			else
-                header('Location: ../index.html');
-  				echo '<div class="alert alert-danger mt-3" role="alert">
-  						The account could not be created
-  					</div>';
+			// if($res) {
+            //     // header('Location: home.php');
+            //     echo "email: " . $_SESSION["email"];
+            //     echo "pass: " . $pass;
+            //     echo '<h1>Login successful!</h1>
+            //     <p>You can now <a href="home.php">go to the home page</a>.</p>';
+            // } 
+  			// else
+            //     // header('Location: ../index.html');
+  			// 	echo '<div class="alert alert-danger mt-3" role="alert">
+  			// 			The account could not be created
+  			// 		</div>';
 		?>
 	</div>
 </body>
-</html>
+</html> -->

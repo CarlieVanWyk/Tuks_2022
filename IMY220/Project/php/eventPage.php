@@ -66,12 +66,61 @@
             ?>
         </div>
         <br/>
-        <div class="container">
+        <div class="container eventPageContainer">
+            <h2 class="text-center">Your experience</h2>
+            <div class="row">
+                <div class="col eventContainer">
+                    <?php 
+                        echo "<img class='rounded-5 eventImage' width='70%' src='../gallery/" . $row['image_name'] . "' alt='event image'>";
+                    ?>
+                    <div class="text-center eventMiddle" id="eventDetails">
+                        <div class="eventText" id="eventDesc">
+                            <i class='fa-solid fa-note-sticky fa-2x'></i>
+                            <?php 
+                                echo "<p>" . $row['description'] . "</p>";
+                            ?>
+                        </div>
+                        <div class="eventText" id="eventLocation">
+                            <i class='fa-solid fa-map-marker-alt fa-2x'></i>
+                            <?php 
+                                echo "<p>" . $row['location'] . "</p>";
+                            ?>
+                        </div>
+                        <div class="eventText" id="eventHash">
+                            <i class='fa-solid fa-hashtag fa-2x'></i>
+                            <?php 
+                                echo "<p>" . $row['hashtags'] . "</p>";
+                            ?>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            <br/>
+            <br/>
+            <div class="row">
+                <h2 class="text-center">Rating and Reviews</h2>
+                <div class="minifeedImages">
+                    <?php
+                        while($row2 = mysqli_fetch_array($res2)) {
+                            echo "<div class='miniFeedDetails'>
+                                    <img class='attendedImage' src='../gallery/" . $row2['image_name'] . "' alt='Card image cap'>
+                                    <i class='fa-solid fa-note-sticky fa-2x'></i>
+                                    <p>" . $row2['description'] . "</p>
+                                    <i class='fa-solid fa-star'></i>
+                                    <p>" . $row2['rating'] . "</p>
+                                </div>";
+                        };
+                    ?>
+                </div>
+            </div>
+           
+        </div>
+        <!-- <div class="container">
             <div class="row" >
                 <div class="col align-self-center">
                     <div id="eventImg" class="text-center">
                         <?php 
-                            echo "<img class='rounded' width='70%' src='../gallery/" . $row['image_name'] . "' alt=''>";
+                            // echo "<img class='rounded' width='70%' src='../gallery/" . $row['image_name'] . "' alt=''>";
                         ?>
                     </div>
                 </div>
@@ -80,19 +129,19 @@
                         <div id="eventDesc">
                             <i class='fa-solid fa-note-sticky fa-2x'></i>
                             <?php 
-                                echo "<p>" . $row['description'] . "</p>";
+                                // echo "<p>" . $row['description'] . "</p>";
                             ?>
                         </div>
                         <div id="eventLocation">
                             <i class='fa-solid fa-map-marker-alt fa-2x'></i>
                             <?php 
-                                echo "<p>" . $row['location'] . "</p>";
+                                // echo "<p>" . $row['location'] . "</p>";
                             ?>
                         </div>
                         <div id="eventHash">
                             <i class='fa-solid fa-hashtag fa-2x'></i>
                             <?php 
-                                echo "<p>" . $row['hashtags'] . "</p>";
+                                // echo "<p>" . $row['hashtags'] . "</p>";
                             ?>
                         </div>
                     </div>
@@ -103,9 +152,9 @@
                 <div class="col align-self-center">
                     <div id="eventImg" class="text-center">
                         <?php 
-                            if(isset($row2['image_name'])){
-                                echo "<img class='rounded' width='70%' src='../gallery/" . $row2['image_name'] . "' alt=''>";
-                            }
+                            // if(isset($row2['image_name'])){
+                            //     echo "<img class='rounded' width='70%' src='../gallery/" . $row2['image_name'] . "' alt=''>";
+                            // }
                         ?>
                     </div>
                 </div>
@@ -113,12 +162,12 @@
                     <div class="text-center" id="eventDetails">
                         <div id="eventDesc">
                             <?php 
-                                if(isset($row2['description'])){
-                                    echo "<i class='fa-solid fa-note-sticky fa-2x'></i>";
-                                    echo "<p>" . $row2['description'] . "</p>";
-                                    echo "<i class='fa-solid fa-star'></i>";
-                                    echo "<p>" . $row2['rating'] . "</p>";
-                                }
+                                // if(isset($row2['description'])){
+                                //     echo "<i class='fa-solid fa-note-sticky fa-2x'></i>";
+                                //     echo "<p>" . $row2['description'] . "</p>";
+                                //     echo "<i class='fa-solid fa-star'></i>";
+                                //     echo "<p>" . $row2['rating'] . "</p>";
+                                // }
                             ?>
                         </div>
                     </div>
@@ -126,7 +175,7 @@
             </div>
             <br/>
             
-        </div>
+        </div> -->
         <!-- Bootstrap Jquery -->
         <script
         src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -149,6 +198,26 @@
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="" async defer></script>
+        <script>
+            $(document).ready(function(){
+                // $(".minifeedDetails").hide();
+                // $(".attendedImage").on("click", function(){
+                //     $(".minifeedDetails").show();
+                // });
+            });
+            // let attendedEvents = <?php echo json_encode($row2) ?>;
+            // console.log("heyy");
+            // console.log(attendedEvents);
+
+            // $.ajax({
+            //     url : "map.php",
+            //     dataType : "json",
+            //     done: function(data){
+                // the data parameter is the json returned by the php
+                // already converted to javascript object...
+                // Just like the regions array from your example.
+            //     }
+            // });
+        </script>
     </body>
 </html>
