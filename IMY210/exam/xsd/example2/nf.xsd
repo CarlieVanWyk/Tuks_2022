@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="https://realbooks.cn/ns/1.0/nf">
+<xs:import schemaLocation="a2.xsd"></xs:import>
+	<xs:element name="book">
+		<xs:complexType>
+			<xs:sequence>
+				
+				<xs:element name="section">
+					<xs:complexType>
+						<xs:sequence>
+						
+							<xs:element name="title">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:maxLength value="255"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							
+							<xs:element name="authors">
+								<xs:complexType>
+									<xs:sequence minOccurs="1" maxOccurs="unbounded">
+										
+										<xs:element name="author">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="255"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							
+							<xs:element name="publisher">
+							    <xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="pubInnerTagText">
+											<xs:attribute name="year" type="xs:integer"></xs:attribute>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				
+				<xs:element name="section">
+					<xs:complexType>
+						<xs:sequence>
+							
+							<xs:element name="isbn">
+								<xs:complexType mixed="true">
+									<xs:choice>
+										
+										<xs:element name="isbn" maxOccurs="3">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:minLength value="10"/>
+													<xs:maxLength value="13"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										
+										<xs:element name="isbn" type="xs:string">
+										</xs:element>
+										
+									</xs:choice>
+								</xs:complexType>
+							</xs:element>
+							
+							<xs:element name="notes">
+							</xs:element>
+							
+							<xs:element name="format">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:maxLength value="255"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							
+							<xs:element name="edition">
+								<xs:simpleType>
+									<xs:restriction base="xs:integer">
+										<xs:maxInclusive value="20"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							
+							<xs:element name="subjects">
+								<xs:complexType>
+									<xs:sequence minOccurs="1" maxOccurs="unbounded">
+										
+										<xs:element name="subject">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="255"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+	
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>
+
+

@@ -1,0 +1,5 @@
+Editor:
+	vsCode
+
+LocalHost:
+	Yes

@@ -1,0 +1,5 @@
+Editor:
+	BaseX
+
+Localhost:
+	No

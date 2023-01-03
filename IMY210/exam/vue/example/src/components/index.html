@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>G</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Examination Section G</h1>
+      <hr />
+      <!-- <input placeholder="task"/> -->
+      <div id="input">
+        <input-comp></input-comp>
+      </div>
+
+      <!-- <ul>
+        Turn the following into a data array and display the content dynamically
+        <li>10:00: Add student number</li>
+        <li>11:00: Ensure files are zipped</li>
+        <li>12:00: Upload on the correct link</li>
+      </ul> -->
+
+      <div id="content">
+        <div class="state" v-for="(messages,index) in messages">
+          {{messages}}
+        </div>
+        <div class="state" v-for="(timestamps,index) in timestamps">
+          <small>{{timestamps}}</small>
+        </div>
+      </div>
+    </div>
+    <!-- This links to the vue lib-->
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://unpkg.com/vuex@next"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js" />
+    <script>
+      function theTime() {
+        var d = new Date(); // for now
+        let timeH = d.getHours(); // => 9
+        let timeM = d.getMinutes(); // =>  30
+        let time = "" + timeH + ":" + timeM + ":";
+        return time;
+      }
+
+      const state = {
+        timestamps: ["10:00:", "11:00:", "12:00:"],
+        messages: [
+          "Add student number",
+          "Ensure files are zipped",
+          "Upload on the correct link",
+        ],
+      };
+
+      const mutations = {
+        ADD_TIMESTAMPS(state, payload) {
+          let newTS = payload;
+          state.timestamps.push(newTS);
+        },
+        ADD_MESSAGE(state, payload) {
+          let newMessage = payload;
+          state.messages.push(newMessage);
+        },
+      };
+
+      const actions = {
+        addUser(context, payload) {
+          context.commit("ADD_USER", payload);
+        },
+        addTimestamps(context, payload) {
+          context.commit("ADD_TIMESTAMPS", payload);
+        },
+        addMessage(context, payload) {
+          context.commit("ADD_MESSAGE", payload);
+        },
+      };
+
+      const getters = {
+        getUser(state) {
+          return state.users;
+        },
+        getTimestamps(state) {
+          return state.timestamps;
+        },
+        getMessage(state) {
+          return state.messages;
+        },
+      };
+
+      const store = Vuex.createStore({
+        state,
+        mutations,
+        actions,
+        getters,
+      });
+
+      const inputComponent = {
+        template:
+          '<input v-model="input2" type="text" placeholder="message" @keyup.enter="enterKeyPress2" />',
+        data() {
+          return {
+            input1: "",
+            input2: "",
+          };
+        },
+        methods: {
+          enterKeyPress2() {
+            this.$store.dispatch("addMessage", this.input2);
+            this.input2 = "";
+            this.$store.dispatch("addTimestamps", theTime());
+          },
+        },
+      };
+
+      const app = Vue.createApp({
+        computed: {
+          messages() {
+            return this.$store.getters.getMessage;
+          },
+          timestamps() {
+            return this.$store.getters.getTimestamps;
+          },
+        },
+        components: {
+          "input-comp2": inputComponent2,
+        },
+      });
+
+      app.use(store);
+      app.mount("#app");
+
+      let myVue = new Vue({
+        el: "#app",
+        data: {},
+        methods: {},
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!-- Carlie van Wyk, u21672823 -->
+
+<!-- dtd 1 -->
+<!-- <!ELEMENT rps (rock, paper, scissors)>
+
+<!ELEMENT rock EMPTY>
+<!ATTLIST rock beat CDATA #FIXED "paper">
+
+<!ELEMENT paper EMPTY>
+<!ATTLIST paper beat CDATA #FIXED "scissors">
+
+<!ELEMENT scissors EMPTY>
+<!ATTLIST scissors beat CDATA #FIXED "rock">
+ -->
+
+<!-- dtd 2 -->
+<!-- <!ELEMENT rpsls (rock, paper, scissors, lizard, spock)>
+
+<!ELEMENT rock EMPTY>
+<!ATTLIST rock beat CDATA #FIXED "paper lizard">
+
+<!ELEMENT paper EMPTY>
+<!ATTLIST paper beat CDATA #FIXED "scissors spock">
+
+<!ELEMENT scissors EMPTY>
+<!ATTLIST scissors beat CDATA #FIXED "rock lizard">
+
+<!ELEMENT lizard EMPTY>
+<!ATTLIST lizard beat CDATA #FIXED "paper spock">
+
+<!ELEMENT spock EMPTY>
+<!ATTLIST spock beat CDATA #FIXED "rock scissors">
+ -->
+
+<!-- dtd 3 -->
+<!ELEMENT game (game, result)>
+<!ATTLIST game icon CDATA #FIXED "rpsls">
+
+<!ELEMENT game (rps | rpsls)+>
+<!ELEMENT rps (rock | paper | scissors)?>
+<!ATTLIST rps game_id ID #REQUIRED>
+<!ELEMENT rpsls (rock | paper | scissors | lizard | spock)?>
+<!ATTLIST rpsls game_id ID #REQUIRED>
+
+<!ELEMENT result (status)+>
+<!ELEMENT status (#PCDATA)>
+<!ATTLIST rpsls game_id IDREF #REQUIRED>
+
+

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!-- Carlie van wyk u21672823 -->
+<package xmlns="http://www.idpf.org/2007/opf" xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:dcterms="http://purl.org/dc/terms/" version="3.0" xml:lang="en"
+	unique-identifier="pub-identifier">
+	<metadata>
+		<dc:title id="pub-title"></dc:title>
+		<dc:identifier id="pub-identifier">urn:isbn:9781449325299</dc:identifier>
+		<dc:language id="pub-language">en</dc:language>
+		<dc:creator id="author">Carlie van wyk</dc:creator>
+		<dc:date>2022-01-01T00:00:00Z</dc:date>
+		<dc:source id="src-id">urn:isbn:9780375704024</dc:source>
+	</metadata>
+	<manifest>
+		<item id="cover" href="cover.xhtml" media-type="application/xhtml+xml"/>
+		<item id="htmltoc" href="toc.xhtml" media-type="application/xhtml+xml" properties="nav"/>
+		<item id="basic" href="basic.xhtml" media-type="application/xhtml+xml"/>
+		<item id="Img" href="images/Img.jpg" media-type="image/jpeg"/>
+		<!--Reference all content that will be used-->
+	</manifest>
+	<spine>
+		<itemref idref="cover" linear="yes"/>
+		<itemref idref="htmltoc" linear="yes"/>
+		<itemref idref="basic"/>
+		<!--What order will the content be displayed?-->
+	</spine>
+</package>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Carlie van wyk u21672823 -->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:f="fish.com" targetNamespace="fish.com">
+<!-- <xs:import schemaLocation="validation.xsd"></xs:import>
+ -->
+
+	<xs:element name="fish">
+		<xs:complexType>
+			<xs:sequence>
+			
+				<xs:choice>
+					<xs:element name="name" type="xs:string">
+					</xs:element>
+				</xs:choice>
+				
+				<xs:choice>
+					<xs:element name="diet" type="xs:string">
+					</xs:element>
+				</xs:choice>
+				
+				<xs:choice>
+					<xs:element name="species" type="xs:string">
+					</xs:element>
+				</xs:choice>
+					
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+		
+	<xs:element name="name" type="xs:string"> </xs:element>
+	<xs:element name="diet" type="xs:string"></xs:element>
+
+</xs:schema>
