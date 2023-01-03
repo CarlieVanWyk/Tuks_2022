@@ -1,0 +1,5 @@
+connection string:
+    mongosh "mongodb+srv://demo.8r2o3n8.mongodb.net/myFirstDatabase" --apiVersion 1 --username MonDbUser
+
+MonDbUser password:
+    LETmondb#46bleh (aka LETmondb%2346bleh)
